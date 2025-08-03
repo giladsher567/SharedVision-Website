@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Heebo:wght@700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+
+  /* SharedVision Custom Colors */
+  --color-space-deep: hsl(234, 55%, 8%);
+  --color-space-deep-lighter: hsl(240, 25%, 15%);
+  --color-turquoise: hsl(190, 87%, 57%);
+  --color-purple: hsl(270, 87%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(225, 23%, 70%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    direction: rtl;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Assistant', sans-serif;
+    background-attachment: fixed;
+    background-image: url('https://r2.flowith.net/files/o/1753255707638-tech_consulting_growth_ai_data_index_0@1536x1024.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 20, 0.85);
+    z-index: -1;
+  }
+}
+
+/* Typography */
+.font-heebo {
+  font-family: 'Heebo', sans-serif;
+}
+
+.font-assistant {
+  font-family: 'Assistant', sans-serif;
+}
+
+/* Colors */
+.bg-space-deep {
+  background-color: var(--color-space-deep);
+}
+
+.bg-space-deep-lighter {
+  background-color: var(--color-space-deep-lighter);
+}
+
+.bg-turquoise-tech {
+  background-color: var(--color-turquoise);
+}
+
+.text-light-gray {
+  color: var(--color-light-gray);
+}
+
+.text-turquoise-tech {
+  color: var(--color-turquoise);
+}
+
+.text-purple-future {
+  color: var(--color-purple);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, var(--color-white), hsl(0, 0%, 94%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 10px hsl(0, 0%, 100%, 0.5);
+}
+
+/* Buttons */
+.btn {
+  @apply inline-block px-8 py-3 rounded-lg font-heebo font-bold text-base text-center transition-all duration-300 cursor-pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-space-deep);
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px hsl(0, 0%, 100%, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 25px hsl(0, 0%, 100%, 0.6);
+  transform: translateY(-3px);
+  background-color: hsl(0, 0%, 94%);
+}
+
+.btn-secondary {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  background-color: transparent;
+  box-shadow: 0 0 15px hsl(0, 0%, 100%, 0.2);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+/* Cards */
+.glass-card {
+  background: hsla(240, 25%, 15%, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid hsl(270, 87%, 63%, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px hsl(0, 0%, 0%, 0.1);
+}
+
+.card {
+  background-color: var(--color-space-deep-lighter);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid hsl(0, 0%, 100%, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px hsl(0, 0%, 0%, 0.2);
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px hsl(270, 87%, 63%, 0.2);
+}
+
+/* Animations */
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+.floating-slow {
+  animation: floating 8s ease-in-out infinite;
+}
+
+.floating-fast {
+  animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.stagger-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fixed Background Logo Integration */
+.logo-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  width: 800px;
+  height: 800px;
+  opacity: 0.02;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(1px);
+  animation: floating-logo 20s ease-in-out infinite;
+}
+
+.logo-background-small {
+  position: fixed;
+  top: 20%;
+  right: 10%;
+  width: 300px;
+  height: 300px;
+  opacity: 0.01;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(2px);
+  transform: rotate(25deg);
+  animation: floating-logo 25s ease-in-out infinite reverse;
+}
+
+.logo-background-tiny {
+  position: fixed;
+  bottom: 15%;
+  left: 15%;
+  width: 400px;
+  height: 400px;
+  opacity: 0.008;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(2px);
+  transform: rotate(-15deg);
+  animation: floating-logo 30s ease-in-out infinite;
+}
+
+@keyframes floating-logo {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(-10deg) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-10deg) translateY(-20px);
+  }
+}
+
+/* Process Timeline */
+.process-timeline {
+  position: relative;
+  padding-right: 50px;
+}
+
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  right: 21px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-turquoise), var(--color-purple));
+  opacity: 0.2;
+}
+
+.process-step {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.process-step:last-child {
+  margin-bottom: 0;
+}
+
+.process-step-number {
+  position: absolute;
+  right: 0px;
+  top: -5px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--color-space-deep);
+  border: 2px solid var(--color-purple);
+  color: var(--color-purple);
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  z-index: 1;
+}
+
+/* Form Inputs */
+.form-input {
+  width: 100%;
+  background-color: var(--color-space-deep);
+  border: 1px solid hsl(0, 0%, 100%, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--color-white);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Assistant', sans-serif;
+  font-size: 1rem;
+}
+
+.form-input::placeholder {
+  color: var(--color-light-gray);
+  opacity: 0.6;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-purple);
+  box-shadow: 0 0 0 2px hsl(270, 87%, 63%, 0.4);
+}
+
+textarea.form-input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Service Detail Cards */
+.service-detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid hsl(0, 0%, 100%, 0.1);
+  background-color: var(--color-space-deep);
+}
+
+@media (min-width: 1024px) {
+  .service-detail-card {
+    flex-direction: row;
+  }
+}
+
+/* Mobile Menu */
+.mobile-nav {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+}
+
+/* Utilities */
+.container {
+  @apply max-w-7xl mx-auto;
+}
