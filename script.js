@@ -177,4 +177,58 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!window.location.pathname.includes('contact.html')) {
     createFloatingCTA();
   }
+
+  // Contact Form Handling
+  const contactForm = document.getElementById('contact-form');
+  const successMessage = document.getElementById('form-success-message');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.textContent;
+      
+      // Set loading state
+      submitButton.disabled = true;
+      submitButton.textContent = 'שולח...';
+      
+      try {
+        const formData = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          // Success
+          contactForm.reset();
+          contactForm.classList.add('hidden');
+          if (successMessage) {
+            successMessage.classList.remove('hidden');
+            // Re-initialize icons for the success message
+            lucide.createIcons();
+          }
+        } else {
+          // Error
+          const data = await response.json();
+          if (Object.hasOwn(data, 'errors')) {
+            alert(data["errors"].map(error => error["message"]).join(", "));
+          } else {
+            alert('אירעה שגיאה בשליחת הטופס. אנא נסו שנית מאוחר יותר.');
+          }
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('אירעה שגיאה בשליחת הטופס. אנא נסו שנית מאוחר יותר.');
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    });
+  }
 });

@@ -7,7 +7,7 @@
     --color-purple: #A54FF5;
     --color-white: #FFFFFF;
     --color-light-gray: #BFC1D8;
-    
+
     /* New modern color variables */
     --color-accent-mocha: #8B5A2B;
     --color-accent-gold: #FFD700;
@@ -55,10 +55,12 @@ body::before {
 .text-light-gray {
     color: var(--color-light-gray);
 }
+
 .text-turquoise-tech {
     color: #ffffff;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
 }
+
 .text-purple-future {
     color: #ffffff;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
@@ -125,7 +127,7 @@ body::before {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .solution-card {
@@ -164,7 +166,6 @@ body::before {
 .service-detail-card {
     display: flex;
     flex-direction: column;
-    lg:flex-direction: row;
     gap: 2rem;
     padding: 2.5rem;
     border-radius: 12px;
@@ -184,6 +185,7 @@ body::before {
     position: relative;
     padding-right: 50px;
 }
+
 .process-timeline::before {
     content: '';
     position: absolute;
@@ -198,6 +200,10 @@ body::before {
 .process-step {
     position: relative;
     margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
 }
 
 .process-step:last-child {
@@ -205,9 +211,11 @@ body::before {
 }
 
 .process-step-number {
-    position: absolute;
-    right: 0px;
-    top: -5px;
+    /* Removed absolute positioning */
+    position: relative;
+    top: 0;
+    right: 0;
+    flex: 0 0 42px;
     width: 42px;
     height: 42px;
     border-radius: 50%;
@@ -224,7 +232,8 @@ body::before {
 }
 
 .process-step-content {
-    /* No extra padding needed here */
+    flex: 1;
+    min-width: 0;
 }
 
 /* Contact Form Styles */
@@ -283,9 +292,11 @@ textarea.form-input {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-15px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -328,10 +339,12 @@ textarea.form-input {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.05);
         opacity: 0.8;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -404,6 +417,7 @@ textarea.form-input {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -415,6 +429,7 @@ textarea.form-input {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -426,6 +441,7 @@ textarea.form-input {
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -437,6 +453,7 @@ textarea.form-input {
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -448,6 +465,7 @@ textarea.form-input {
         opacity: 0;
         transform: scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);

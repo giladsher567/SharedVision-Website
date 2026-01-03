@@ -1,222 +1,181 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>קבע פגישת ייעוץ חינם - SharedVision</title>
-    <meta name="description" content="קבע פגישת ייעוץ ללא עלות עם מומחי SharedVision וגלה כיצד פתרונות AI ואוטומציה יכולים לחסוך לעסק שלך זמן, כסף וטעויות אנוש.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Heebo:wght@700;800&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Add calendly for scheduling -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-</head>
-<body class="bg-space-deep text-light-gray font-assistant">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>צור קשר - SharedVision</title>
+    <meta name="description" content="השאירו פרטים ונחזור אליכם בהקדם. SharedVision - פתרונות AI ואוטומציה לעסקים." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Heebo:wght@700;800&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-space-deep text-light-gray font-assistant">
     <header class="sticky top-0 z-50 py-6 px-4 sm:px-6 lg:px-8 bg-space-deep/80 backdrop-blur-sm">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3 hover-lift">
-                <div class="relative h-10 w-10 overflow-hidden rounded-full bg-gradient-to-br from-purple-future to-turquoise-tech p-0.5">
-                    <img src="https://r2.flowith.net/files/10df91f6-34a2-4144-8d73-c578804af99f/1753255150860-ChatGPT_Image_Jul_14,_2025,_08_41_21_PM@1024x1024.png" alt="לוגו SharedVision" class="h-full w-full rounded-full object-cover">
+                <div
+                    class="relative h-10 w-10 overflow-hidden rounded-full bg-gradient-to-br from-purple-future to-turquoise-tech p-0.5">
+                    <img src="https://r2.flowith.net/files/10df91f6-34a2-4144-8d73-c578804af99f/1753255150860-ChatGPT_Image_Jul_14,_2025,_08_41_21_PM@1024x1024.png"
+                        alt="לוגו SharedVision" class="h-full w-full rounded-full object-cover" />
                 </div>
                 <span class="font-heebo text-white text-2xl font-bold gradient-text">SharedVision</span>
             </a>
+
             <nav class="hidden md:flex items-center gap-x-8 text-white">
-                <a href="index.html" class="hover:text-purple-future transition-colors">בית</a>
-                <a href="services.html" class="hover:text-purple-future transition-colors">שירותים</a>
-                <a href="about.html" class="hover:text-purple-future transition-colors">אודות</a>
-                <a href="case-studies.html" class="hover:text-purple-future transition-colors">סיפורי לקוח</a>
-                <a href="contact.html" class="text-purple-future font-bold transition-colors">צור קשר</a>
+                <a href="index.html" class="hover:text-purple-future transition-colors hover-lift">בית</a>
+                <a href="services.html" class="hover:text-purple-future transition-colors hover-lift">שירותים</a>
+                <a href="contact.html" class="text-purple-future font-bold transition-colors hover-lift">צור קשר</a>
             </nav>
-            <a href="contact.html" class="hidden md:block btn btn-secondary">קבע פגישה</a>
-            <button class="md:hidden text-white">
+
+            <a href="contact.html" class="hidden md:block btn btn-secondary gradient-border hover-lift pulse">קבע
+                שיחה</a>
+
+            <button class="md:hidden text-white glass-card p-2 rounded-lg hover-lift" aria-label="menu">
                 <i data-lucide="menu" class="w-8 h-8"></i>
             </button>
         </div>
     </header>
 
     <main>
-        <!-- Intro Section -->
-        <section class="py-20 md:py-32 text-center px-4">
-            <div class="container mx-auto animate-on-scroll">
-                <h1 class="font-heebo text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">קבע פגישת ייעוץ <span class="gradient-text">וגלה כמה זמן וכסף תוכל לחסוך</span></h1>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-light-gray mb-8">
-                    בפגישה קצרה של 30 דקות, נבחן יחד את האתגרים התפעוליים של העסק שלך ונציע פתרונות AI ואוטומציה שיכולים לחסוך לך <span class="font-semibold text-white">עשרות שעות עבודה בחודש</span> ולמנוע טעויות יקרות.
-                </p>
-                <div class="flex flex-wrap justify-center gap-4 mb-8">
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle" class="w-6 h-6 text-turquoise-tech"></i>
-                        <span>ייעוץ ללא עלות</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle" class="w-6 h-6 text-turquoise-tech"></i>
-                        <span>ללא התחייבות</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="check-circle" class="w-6 h-6 text-turquoise-tech"></i>
-                        <span>30 דקות בלבד</span>
-                    </div>
+        <section class="py-20 md:py-28 px-4">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center mb-12">
+                    <h1 class="font-heebo text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                        בואו נדבר
+                        <span class="gradient-text"> ונבנה פתרון חכם</span>
+                    </h1>
+                    <p class="text-lg md:text-xl max-w-3xl mx-auto text-light-gray">
+                        השאירו פרטים ונחזור אליכם תוך יום עסקים אחד. אין התחייבות ואין לחץ.
+                    </p>
                 </div>
-                <div class="flex justify-center">
-                    <a href="#booking-section" class="btn btn-primary">קבע פגישה עכשיו</a>
-                </div>
-            </div>
-        </section>
 
-        <!-- Contact Form Section -->
-        <section id="booking-section" class="pb-20 md:pb-32">
-            <div class="container mx-auto px-4 max-w-5xl">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- Left side: Contact Form -->
-                    <div class="bg-space-deep-lighter p-8 md:p-12 rounded-xl shadow-lg border border-gray-700/50 animate-on-scroll">
-                        <h2 class="font-heebo text-3xl font-bold text-white text-center mb-8">השאירו פרטים לייעוץ ראשוני</h2>
-                        <form id="contact-form" action="#" method="POST" class="space-y-6">
+                <div class="max-w-3xl mx-auto">
+                    <!-- Form -->
+                    <div class="bg-space-deep-lighter p-8 md:p-10 rounded-xl shadow-lg border border-gray-700/50 mb-16">
+                        <h2 class="font-heebo text-2xl md:text-3xl font-bold text-white text-center mb-8">שליחת פנייה
+                        </h2>
+
+                        <form id="contact-form" action="https://formspree.io/f/mpqwwgyd" method="POST"
+                            class="space-y-6">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
-                                    <label for="full-name" class="block text-sm font-medium text-light-gray mb-2">שם מלא</label>
-                                    <input type="text" name="full-name" id="full-name" required class="form-input">
+                                    <label for="full-name" class="block text-sm font-medium text-light-gray mb-2">שם
+                                        מלא</label>
+                                    <input id="full-name" name="full-name" type="text" required class="form-input" />
                                 </div>
                                 <div>
-                                    <label for="company-name" class="block text-sm font-medium text-light-gray mb-2">שם החברה</label>
-                                    <input type="text" name="company-name" id="company-name" class="form-input">
+                                    <label for="company-name" class="block text-sm font-medium text-light-gray mb-2">שם
+                                        חברה</label>
+                                    <input id="company-name" name="company-name" type="text" class="form-input" />
                                 </div>
                             </div>
+
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
-                                    <label for="email" class="block text-sm font-medium text-light-gray mb-2">דוא"ל</label>
-                                    <input type="email" name="email" id="email" required class="form-input">
+                                    <label for="email"
+                                        class="block text-sm font-medium text-light-gray mb-2">דוא״ל</label>
+                                    <input id="email" name="email" type="email" required class="form-input" />
                                 </div>
                                 <div>
-                                    <label for="phone" class="block text-sm font-medium text-light-gray mb-2">טלפון</label>
-                                    <input type="tel" name="phone" id="phone" required class="form-input">
+                                    <label for="phone"
+                                        class="block text-sm font-medium text-light-gray mb-2">טלפון</label>
+                                    <input id="phone" name="phone" type="tel" class="form-input" />
                                 </div>
                             </div>
+
                             <div>
-                                <label for="business-field" class="block text-sm font-medium text-light-gray mb-2">תחום פעילות העסק</label>
-                                <input type="text" name="business-field" id="business-field" class="form-input">
+                                <label for="business-field" class="block text-sm font-medium text-light-gray mb-2">תחום
+                                    פעילות</label>
+                                <input id="business-field" name="business-field" type="text" class="form-input" />
                             </div>
+
                             <div>
-                                <label for="challenge" class="block text-sm font-medium text-light-gray mb-2">מהו האתגר המרכזי שאתם מחפשים לו פתרון?</label>
-                                <textarea name="challenge" id="challenge" rows="4" class="form-input" placeholder="אנא תארו בקצרה את הבעיה או התהליך שאתם רוצים לשפר..."></textarea>
+                                <label for="challenge" class="block text-sm font-medium text-light-gray mb-2">במה נוכל
+                                    לעזור?</label>
+                                <textarea id="challenge" name="challenge" rows="4" class="form-input"
+                                    placeholder="תארו בקצרה מה אתם רוצים לשפר/לייעל…"></textarea>
                             </div>
-                            <div class="text-center pt-4">
-                                <button type="submit" class="btn btn-primary w-full">שלח פרטים</button>
+
+                            <!-- Optional: redirect after submit -->
+                            <!-- <input type="hidden" name="_redirect" value="https://your-domain.co.il/thanks.html"> -->
+
+                            <div class="pt-2">
+                                <button type="submit" class="btn btn-primary w-full text-lg">שלח</button>
                             </div>
-                            <p class="text-center text-sm text-light-gray/70 mt-4">אנו מתחייבים לחזור אליכם תוך יום עסקים אחד</p>
+
+                            <p class="text-center text-sm text-light-gray/70">נחזור אליכם תוך יום עסקים אחד</p>
                         </form>
                     </div>
-                    
-                    <!-- Right side: Direct Scheduling -->
-                    <div class="bg-space-deep-lighter p-8 md:p-12 rounded-xl shadow-lg border border-gray-700/50 animate-on-scroll" style="animation-delay: 0.1s;">
-                        <h2 class="font-heebo text-3xl font-bold text-white text-center mb-8">קבע פגישה ישירות ביומן</h2>
-                        <p class="text-center mb-6">אין צורך לחכות - בחר מועד פנוי ביומן וקבע פגישת ייעוץ ללא עלות (30 דקות)</p>
-                        
-                        <!-- Calendly inline widget -->
-                        <div class="calendly-inline-widget" data-url="https://calendly.com/d/abc-123/30min" style="min-width:320px;height:630px;"></div>
-                        
-                        <div class="flex items-center justify-center mt-6 gap-2">
-                            <i data-lucide="shield-check" class="w-5 h-5 text-turquoise-tech"></i>
-                            <p class="text-sm text-light-gray/70">הפגישה אינה מחייבת המשך התקשרות</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <!-- Info section -->
+                    <div class="text-center">
+                        <h2 class="font-heebo text-2xl md:text-3xl font-bold text-white mb-8">פרטי יצירת קשר
+                        </h2>
 
-        <!-- What Happens Next & Testimonials -->
-        <section class="pb-20 md:pb-32 bg-space-deep-lighter">
-            <div class="container mx-auto px-4 max-w-5xl animate-on-scroll">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Left side: What Happens Next -->
-                    <div>
-                        <h3 class="font-heebo text-2xl md:text-3xl font-bold text-white mb-8 text-center lg:text-right">מה קורה בפגישת הייעוץ?</h3>
-                        <div class="process-timeline">
-                            <div class="process-step">
-                                <div class="process-step-number">1</div>
-                                <div class="process-step-content">
-                                    <h4 class="font-bold text-white text-lg">הבנת האתגרים</h4>
-                                    <p>נקשיב ונלמד על העסק שלך והאתגרים התפעוליים שאתם מתמודדים איתם.</p>
-                                </div>
+                        <div class="flex flex-wrap justify-center gap-8 md:gap-12 mb-8">
+                            <div class="flex flex-col items-center gap-3">
+                                <i data-lucide="mail" class="w-8 h-8 text-turquoise-tech"></i>
+                                <a href="mailto:sharedvisionai@gmail.com"
+                                    class="text-lg hover:text-turquoise-tech transition-colors">
+                                    sharedvisionai@gmail.com
+                                </a>
                             </div>
-                            <div class="process-step">
-                                <div class="process-step-number">2</div>
-                                <div class="process-step-content">
-                                    <h4 class="font-bold text-white text-lg">זיהוי הזדמנויות</h4>
-                                    <p>נזהה תהליכים שניתן לייעל באמצעות אוטומציה ו-AI ונעריך את החיסכון הפוטנציאלי.</p>
-                                </div>
+
+                            <div class="flex flex-col items-center gap-3">
+                                <i data-lucide="phone" class="w-8 h-8 text-turquoise-tech"></i>
+                                <a href="tel:+972501234567" class="text-lg hover:text-turquoise-tech transition-colors">
+                                    050-852-2528
+                                </a>
                             </div>
-                            <div class="process-step">
-                                <div class="process-step-number">3</div>
-                                <div class="process-step-content">
-                                    <h4 class="font-bold text-white text-lg">הצעת פתרונות</h4>
-                                    <p>נציע פתרונות מותאמים אישית שיכולים לחסוך לכם זמן, כסף וטעויות אנוש.</p>
-                                </div>
+
+                            <div class="flex flex-col items-center gap-3">
+                                <i data-lucide="map-pin" class="w-8 h-8 text-turquoise-tech"></i>
+                                <span class="text-lg">תל אביב, ישראל</span>
+                            </div>
+
+                            <div class="flex flex-col items-center gap-3">
+                                <a href="https://www.facebook.com/profile.php?id=61578927274888&locale=he_IL"
+                                    class="hover:text-turquoise-tech transition-colors" aria-label="Facebook">
+                                    <i data-lucide="facebook" class="w-8 h-8 text-turquoise-tech"></i>
+                                </a>
+                            </div>
+
+                            <div class="flex flex-col items-center gap-3">
+                                <a href="https://www.instagram.com/sharedvision.ai/"
+                                    class="hover:text-turquoise-tech transition-colors" aria-label="Instagram">
+                                    <i data-lucide="instagram" class="w-8 h-8 text-turquoise-tech"></i>
+                                </a>
                             </div>
                         </div>
-                        <div class="mt-8 flex items-center justify-center lg:justify-start gap-3 bg-space-deep p-4 rounded-lg">
+
+                        <div class="flex flex-col items-center gap-3 mt-8">
                             <i data-lucide="shield" class="w-6 h-6 text-turquoise-tech"></i>
-                            <p class="text-sm">אנחנו מכבדים את הפרטיות שלכם. המידע שתמסרו ישמש אך ורק ליצירת קשר בנוגע לפנייתכם.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Right side: Testimonials -->
-                    <div>
-                        <h3 class="font-heebo text-2xl md:text-3xl font-bold text-white mb-8 text-center lg:text-right">מה לקוחות אומרים</h3>
-                        <div class="space-y-6">
-                            <div class="bg-space-deep p-6 rounded-xl border border-gray-700/50">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="w-12 h-12 rounded-full bg-purple-future/30 flex items-center justify-center text-white font-bold">מ.ש</div>
-                                    <div>
-                                        <p class="font-bold text-white">מנכ"ל, סוכנות לייצוג שחקנים</p>
-                                        <div class="flex text-turquoise-tech">
-                                            <i data-lucide="star" class="w-4 h-4"></i>
-                                            <i data-lucide="star" class="w-4 h-4"></i>
-                                            <i data-lucide="star" class="w-4 h-4"></i>
-                                            <i data-lucide="star" class="w-4 h-4"></i>
-                                            <i data-lucide="star" class="w-4 h-4"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="italic">"העבודה עם SharedVision שינתה לנו את כל התפעול. חסכנו יום עבודה שלם בשבוע וסוף סוף יש לנו שליטה מלאה על מה שקורה בעסק."</p>
-                            </div>
-                            
-                            <div class="bg-space-deep p-6 rounded-xl border border-gray-700/50">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="w-12 h-12 rounded-full bg-turquoise-tech/30 flex items-center justify-center text-white font-bold">ר.כ</div>
-                                    <div>
-                                        <p class="font-bold text-white">שותף מנהל, משרד לייעוץ השקעות</p>
-                                        <div class="flex text-turquoise-tech">
-                                            <i data-lucide="star" class="w-4 h-4"></i>
-                                            <i data-lucide="star" class="w-4 h-4"></i>
-                                            <i data-lucide="star" class="w-4 h-4"></i>
-                                            <i data-lucide="star" class="w-4 h-4"></i>
-                                            <i data-lucide="star" class="w-4 h-4"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="italic">"הפתרון של SharedVision לא רק חסך לנו המון כסף וזמן, הוא שדרג את רמת השירות שאנחנו נותנים ללקוחות שלנו. זה נכס אסטרטגי עבורנו."</p>
-                            </div>
+                            <p class="text-sm text-light-gray/70">
+                                המידע שתמסרו ישמש רק ליצירת קשר לגבי הפנייה.
+                            </p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
-
     </main>
 
     <footer class="bg-space-deep py-8">
         <div class="container mx-auto px-4 text-center text-light-gray">
-            <p>&copy; 2025 SharedVision. כל הזכויות שמורות.</p>
+            <p>&copy; 2026 SharedVision. כל הזכויות שמורות.</p>
         </div>
     </footer>
-    
+
     <script type="module" src="script.js"></script>
 </body>
+
 </html>
