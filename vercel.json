@@ -2,33 +2,30 @@
     "redirects": [
         {
             "source": "/en",
-            "destination": "/en/index.html",
+            "destination": "/en/",
             "permanent": true
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/services",
+            "destination": "/services.html"
+        },
+        {
+            "source": "/contact",
+            "destination": "/contact.html"
+        },
+        {
+            "source": "/en/services",
+            "destination": "/en/services.html"
+        },
+        {
+            "source": "/en/contact",
+            "destination": "/en/contact.html"
         },
         {
             "source": "/en/",
-            "destination": "/en/index.html",
-            "permanent": true
-        },
-        {
-            "source": "/services.html",
-            "destination": "/services",
-            "permanent": true
-        },
-        {
-            "source": "/contact.html",
-            "destination": "/contact",
-            "permanent": true
-        },
-        {
-            "source": "/en/services.html",
-            "destination": "/en/services",
-            "permanent": true
-        },
-        {
-            "source": "/en/contact.html",
-            "destination": "/en/contact",
-            "permanent": true
+            "destination": "/en/index.html"
         }
     ]
 }
