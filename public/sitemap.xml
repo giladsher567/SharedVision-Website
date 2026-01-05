@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://sharedvisionai.org/</loc>
-    <lastmod>2025-01-05</lastmod>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://sharedvisionai.org/services.html</loc>
-    <lastmod>2025-01-05</lastmod>
+    <loc>https://sharedvisionai.org/services</loc>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://sharedvisionai.org/contact.html</loc>
-    <lastmod>2025-01-05</lastmod>
+    <loc>https://sharedvisionai.org/contact</loc>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://sharedvisionai.org/en/</loc>
-    <lastmod>2025-01-05</lastmod>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://sharedvisionai.org/en/services.html</loc>
-    <lastmod>2025-01-05</lastmod>
+    <loc>https://sharedvisionai.org/en/services</loc>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://sharedvisionai.org/en/contact.html</loc>
-    <lastmod>2025-01-05</lastmod>
+    <loc>https://sharedvisionai.org/en/contact</loc>
+    <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
 </urlset>
