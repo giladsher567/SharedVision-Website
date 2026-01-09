@@ -7,9 +7,13 @@
 
     <title>SharedVision AI – פתרונות בינה מלאכותית ואוטומציה לעסקים</title>
     <meta name="description"
-        content="SharedVision בונה מערכות AI ואוטומציה מותאמות אישית לעסק שלך, שחוסכות לך זמן יקר, כסף וטעויות אנוש." />
+        content="SharedVision בונה מערכות AI ואוטומציה מותאמות אישית לעסק שלך, שחוסכות זמן, כסף וטעויות אנוש — ומייצרות תוצאות מדידות." />
+
+    <!-- Indexing -->
+    <meta name="robots" content="index,follow,max-image-preview:large" />
 
     <meta name="google-site-verification" content="5pvEI1cmHTvHGCPPwdS0LFg-IiBfiSkB8lXVjnUWwks" />
+
     <!-- Canonical -->
     <link rel="canonical" href="https://sharedvisionai.org/" />
 
@@ -19,14 +23,14 @@
     <link rel="alternate" hreflang="x-default" href="https://sharedvisionai.org/" />
 
     <!-- Open Graph -->
+    <meta property="og:locale" content="he_IL" />
     <meta property="og:title" content="SharedVision AI – פתרונות בינה מלאכותית ואוטומציה לעסקים" />
     <meta property="og:description"
-        content="מערכות AI ואוטומציה מותאמות אישית לעסקים: חיסכון בזמן, דיוק בתהליכים, והגדלת תוצאות." />
+        content="מערכות AI ואוטומציה מותאמות אישית לעסקים: חיסכון בזמן, דיוק בתהליכים, ואופטימיזציה שמייצרת תוצאות." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sharedvisionai.org/" />
     <meta property="og:site_name" content="SharedVision AI" />
 
-    <!-- Social share image -->
     <meta property="og:image"
         content="https://r2.flowith.net/files/10df91f6-34a2-4144-8d73-c578804af99f/1753255150860-ChatGPT_Image_Jul_14,_2025,_08_41_21_PM@1024x1024.png" />
     <meta property="og:image:alt" content="SharedVision AI - לוגו" />
@@ -37,7 +41,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="SharedVision AI – פתרונות בינה מלאכותית ואוטומציה לעסקים" />
     <meta name="twitter:description"
-        content="מערכות AI ואוטומציה מותאמות אישית לעסקים: חיסכון בזמן, דיוק בתהליכים, והגדלת תוצאות." />
+        content="מערכות AI ואוטומציה מותאמות אישית לעסקים: חיסכון בזמן, דיוק בתהליכים, ואופטימיזציה שמייצרת תוצאות." />
     <meta name="twitter:image"
         content="https://r2.flowith.net/files/10df91f6-34a2-4144-8d73-c578804af99f/1753255150860-ChatGPT_Image_Jul_14,_2025,_08_41_21_PM@1024x1024.png" />
 
@@ -92,17 +96,52 @@
           "@id": "https://sharedvisionai.org/#website",
           "url": "https://sharedvisionai.org/",
           "name": "SharedVision AI",
-          "publisher": {
-            "@id": "https://sharedvisionai.org/#organization"
-          },
+          "publisher": { "@id": "https://sharedvisionai.org/#organization" },
           "inLanguage": ["he", "en"]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://sharedvisionai.org/#webpage",
+          "url": "https://sharedvisionai.org/",
+          "name": "SharedVision AI – פתרונות בינה מלאכותית ואוטומציה לעסקים",
+          "description": "SharedVision בונה מערכות AI ואוטומציה מותאמות אישית לעסקים, עם דגש על תוצאות מדידות וחיסכון בזמן.",
+          "inLanguage": "he",
+          "isPartOf": { "@id": "https://sharedvisionai.org/#website" },
+          "about": { "@id": "https://sharedvisionai.org/#organization" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://r2.flowith.net/files/10df91f6-34a2-4144-8d73-c578804af99f/1753255150860-ChatGPT_Image_Jul_14,_2025,_08_41_21_PM@1024x1024.png"
+          },
+          "mainEntity": { "@id": "https://sharedvisionai.org/#offer-catalog" }
+        },
+        {
+          "@type": "OfferCatalog",
+          "@id": "https://sharedvisionai.org/#offer-catalog",
+          "name": "שירותי AI ואוטומציה לעסקים",
+          "itemListElement": [
+            { "@type": "Offer", "url": "https://sharedvisionai.org/services#svc-ai", "itemOffered": { "@type": "Service", "name": "הטמעת AI חכמה", "serviceType": "AI Implementation", "provider": { "@id": "https://sharedvisionai.org/#organization" }, "areaServed": "IL" } },
+            { "@type": "Offer", "url": "https://sharedvisionai.org/services#svc-auto", "itemOffered": { "@type": "Service", "name": "אוטומציה של תהליכים", "serviceType": "Business Process Automation", "provider": { "@id": "https://sharedvisionai.org/#organization" }, "areaServed": "IL" } },
+            { "@type": "Offer", "url": "https://sharedvisionai.org/services#svc-consult", "itemOffered": { "@type": "Service", "name": "ייעוץ טכנולוגי אסטרטגי", "serviceType": "Strategic Tech Consulting", "provider": { "@id": "https://sharedvisionai.org/#organization" }, "areaServed": "IL" } },
+            { "@type": "Offer", "url": "https://sharedvisionai.org/services#svc-chatbots", "itemOffered": { "@type": "Service", "name": "צ'אטבוטים ושירות אוטומטי", "serviceType": "Business Chatbots", "provider": { "@id": "https://sharedvisionai.org/#organization" }, "areaServed": "IL" } },
+            { "@type": "Offer", "url": "https://sharedvisionai.org/services#svc-crm", "itemOffered": { "@type": "Service", "name": "מערכות CRM מותאמות", "serviceType": "Custom CRM Systems", "provider": { "@id": "https://sharedvisionai.org/#organization" }, "areaServed": "IL" } },
+            { "@type": "Offer", "url": "https://sharedvisionai.org/services#svc-video", "itemOffered": { "@type": "Service", "name": "מערכות וידאו חכמות", "serviceType": "Smart Video Systems", "provider": { "@id": "https://sharedvisionai.org/#organization" }, "areaServed": "IL" } }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://sharedvisionai.org/#faq",
+          "inLanguage": "he",
+          "mainEntity": [
+            { "@type": "Question", "name": "כמה זמן לוקח להקים אוטומציה או פתרון AI בעסק?", "acceptedAnswer": { "@type": "Answer", "text": "ברוב המקרים מתחילים באפיון קצר ומוכוון תוצאה. לאחר מכן בונים פתרון ראשוני (MVP) תוך מספר ימים עד מספר שבועות — בהתאם להיקף האינטגרציות והדאטה." } },
+            { "@type": "Question", "name": "האם אתם מתחברים למערכות קיימות (CRM, מייל, וואטסאפ, יומן)?", "acceptedAnswer": { "@type": "Answer", "text": "כן. אנחנו בונים אינטגרציות בין המערכות שכבר יש לכם כדי ליצור זרימת עבודה רציפה: CRM, דוא\"ל, טפסים, וואטסאפ, יומן, דוחות ועוד." } },
+            { "@type": "Question", "name": "מה ההבדל בין אוטומציה לבין AI?", "acceptedAnswer": { "@type": "Answer", "text": "אוטומציה מחברת שלבים ומסירה עבודה ידנית. AI מוסיף שכבת החלטה/ניתוח (סיווג, תעדוף, חיזוי, תקצור) כדי לשפר תוצאות ולהקטין טעויות." } },
+            { "@type": "Question", "name": "איך יודעים שהמערכת באמת משתלמת?", "acceptedAnswer": { "@type": "Answer", "text": "מגדירים KPI מראש (זמן טיפול, שיעור טעויות, זמן תגובה, עלות תפעולית, המרות/לידים) ובונים פתרון שמדווח ומאפשר אופטימיזציה לאורך זמן." } }
+          ]
         }
       ]
     }
     </script>
-
 </head>
-
 
 <body class="text-light-gray font-assistant">
 
@@ -120,7 +159,6 @@
                             class="font-heebo text-white text-2xl font-bold gradient-text hidden sm:inline">SharedVision</span>
                     </a>
 
-                    <!-- Language Switcher -->
                     <a href="/en/"
                         class="flex items-center gap-1 text-white hover:text-purple-future transition-colors font-bold text-sm bg-white/10 px-3 py-1 rounded-full border border-white/20 hover:bg-white/20">
                         <span>🇺🇸</span> EN
@@ -148,14 +186,33 @@
             <div class="relative z-10 max-w-4xl mx-auto animate-on-scroll mt-24">
                 <h1 class="font-heebo text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6"
                     data-entrance-effect="random">
-                    תפסיקו לבזבז זמן על עבודה שחורה.<br class="hidden md:block" />
-                    <span class="gradient-text">תתחילו לצמוח עם פתרונות חכמים.</span>
+                    תפסיקו לבזבז זמן על עבודה שחורה<br class="hidden md:block" />
+                    <span class="gradient-text">תתחילו לצמוח עם פתרונות חכמים</span>
                 </h1>
 
                 <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-light-gray">
                     SharedVision בונה מערכות AI ואוטומציה מותאמות אישית לעסק שלך, שחוסכות לך זמן יקר, כסף וטעויות אנוש.
                     אנחנו הופכים אתגרים תפעוליים למנועי צמיחה.
                 </p>
+
+                <!-- Tech identity block (SEO + AI) -->
+                <div class="max-w-3xl mx-auto glass-card p-5 rounded-2xl border border-gray-700/40 mb-8 text-right">
+                    <h2 class="font-heebo text-xl md:text-2xl font-bold text-white mb-3">מה אנחנו עושים בפועל?</h2>
+                    <ul class="space-y-2 text-light-gray/90">
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-5 h-5 text-turquoise-tech mt-1"></i><span>אפיון תהליכים + KPI: מה מודדים, ומה
+                                משתפר.</span></li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-5 h-5 text-turquoise-tech mt-1"></i><span>אינטגרציות בין מערכות קיימות (CRM,
+                                מייל, וואטסאפ, טפסים, יומן).</span></li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-5 h-5 text-turquoise-tech mt-1"></i><span>אוטומציה + שכבת AI: תעדוף, סיווג,
+                                תקצור, חיזוי ושיפור החלטות.</span></li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                                class="w-5 h-5 text-turquoise-tech mt-1"></i><span>הטמעה והדרכה: מערכת שעובדת ביום-יום
+                            </span></li>
+                    </ul>
+                </div>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
                     <a href="/contact" class="btn btn-primary text-lg px-8 py-4 gradient-border hover-lift">
@@ -177,10 +234,27 @@
                     </div>
                     <div class="flex items-center gap-2">
                         <i data-lucide="check-circle" class="w-5 h-5 text-turquoise-tech"></i>
-                        <span>ROI מוכח</span>
+                        <span>מדידה ושיפור</span>
                     </div>
                 </div>
-            </div>
+
+                <!-- Trust (logos) -->
+                <!-- Trust (logos) -->
+                <div class="mt-8 max-w-3xl mx-auto glass-card p-5 rounded-2xl border border-gray-700/40">
+                    <p class="text-sm text-light-gray/80 mb-3 text-center">בונים פתרונות בארגונים מובילים</p>
+
+                    <div class="logo-slot" aria-label="Client logos">
+                        <img class="client-logo logo-1"
+                            src="https://play-lh.googleusercontent.com/RA8F-AD5IbLNNO4Qs_ccgi9p1txoZXmR7ZyN1b3Xx_j8pOf0JQkYHMs-zxYkaFLnzwBD=w600-h300-pc0xffffff-pd"
+                            alt="i24NEWS" />
+
+                        <img class="client-logo logo-2" src="https://he.gadot.com/wp-content/uploads/2020/10/logo-1.png"
+                            alt="גדות כימיקלים" />
+                    </div>
+
+
+
+                </div>
         </section>
 
         <!-- Pain Points Section -->
@@ -235,6 +309,7 @@
                         <p>שגיאות קטנות שמובילות לאובדן הכנסה, פגיעה במוניטין ובחוויית הלקוח.</p>
                     </div>
                 </div>
+
                 <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
                     <div
                         class="absolute top-20 left-10 w-96 h-96 rounded-full bg-purple-future/10 blur-3xl floating-slow">
@@ -260,9 +335,9 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 animate-on-scroll">
-                    <!-- Card 1 -->
                     <a href="/services#svc-ai"
-                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
+                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition"
+                        aria-label="הטמעת AI חכמה לעסקים - לפרטים">
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-purple-future/20 flex items-center justify-center">
                                 <i data-lucide="brain-circuit" class="w-6 h-6 gradient-text"></i>
@@ -273,14 +348,13 @@
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>לפרטים</span>
-                            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                            <span>לפרטים</span><i data-lucide="arrow-left" class="w-4 h-4"></i>
                         </div>
                     </a>
 
-                    <!-- Card 2 -->
                     <a href="/services#svc-auto"
-                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
+                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition"
+                        aria-label="אוטומציה עסקית לתהליכים - לפרטים">
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-purple-future/20 flex items-center justify-center">
                                 <i data-lucide="bot" class="w-6 h-6 gradient-text"></i>
@@ -291,14 +365,13 @@
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>לפרטים</span>
-                            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                            <span>לפרטים</span><i data-lucide="arrow-left" class="w-4 h-4"></i>
                         </div>
                     </a>
 
-                    <!-- Card 3 -->
                     <a href="/services#svc-consult"
-                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
+                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition"
+                        aria-label="ייעוץ טכנולוגי אסטרטגי לעסקים - לפרטים">
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-purple-future/20 flex items-center justify-center">
                                 <i data-lucide="lightbulb" class="w-6 h-6 gradient-text"></i>
@@ -309,14 +382,13 @@
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>לפרטים</span>
-                            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                            <span>לפרטים</span><i data-lucide="arrow-left" class="w-4 h-4"></i>
                         </div>
                     </a>
 
-                    <!-- Card 4 -->
                     <a href="/services#svc-chatbots"
-                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
+                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition"
+                        aria-label="צ'אטבוטים לעסק ושירות אוטומטי - לפרטים">
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-purple-future/20 flex items-center justify-center">
                                 <i data-lucide="messages-square" class="w-6 h-6 gradient-text"></i>
@@ -327,14 +399,13 @@
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>לפרטים</span>
-                            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                            <span>לפרטים</span><i data-lucide="arrow-left" class="w-4 h-4"></i>
                         </div>
                     </a>
 
-                    <!-- Card 5 -->
                     <a href="/services#svc-crm"
-                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
+                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition"
+                        aria-label="מערכות CRM מותאמות לעסקים - לפרטים">
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-purple-future/20 flex items-center justify-center">
                                 <i data-lucide="layout-dashboard" class="w-6 h-6 gradient-text"></i>
@@ -345,14 +416,13 @@
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>לפרטים</span>
-                            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                            <span>לפרטים</span><i data-lucide="arrow-left" class="w-4 h-4"></i>
                         </div>
                     </a>
 
-                    <!-- Card 6 -->
                     <a href="/services#svc-video"
-                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
+                        class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition"
+                        aria-label="מערכות וידאו חכמות - לפרטים">
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 rounded-xl bg-purple-future/20 flex items-center justify-center">
                                 <i data-lucide="video" class="w-6 h-6 gradient-text"></i>
@@ -363,10 +433,55 @@
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>לפרטים</span>
-                            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                            <span>לפרטים</span><i data-lucide="arrow-left" class="w-4 h-4"></i>
                         </div>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (matches JSON-LD) -->
+        <section id="faq" class="py-20 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center animate-on-scroll">
+                    <h2 class="font-heebo text-3xl md:text-5xl font-bold text-white mb-4">שאלות נפוצות</h2>
+                    <p class="text-lg md:text-xl text-light-gray">תשובות קצרות וברורות לפני שמתחילים.</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto mt-10 space-y-4">
+                    <details class="glass-card p-5 rounded-2xl border border-gray-700/40 hover-lift">
+                        <summary class="cursor-pointer text-white font-bold">כמה זמן לוקח להקים אוטומציה או פתרון AI
+                            בעסק?</summary>
+                        <div class="mt-3 text-light-gray/90">
+                            ברוב המקרים מתחילים באפיון קצר ומוכוון תוצאה. לאחר מכן בונים פתרון ראשוני (MVP) תוך מספר
+                            ימים עד מספר שבועות — בהתאם להיקף האינטגרציות והדאטה.
+                        </div>
+                    </details>
+
+                    <details class="glass-card p-5 rounded-2xl border border-gray-700/40 hover-lift">
+                        <summary class="cursor-pointer text-white font-bold">האם אתם מתחברים למערכות קיימות (CRM, מייל,
+                            וואטסאפ, יומן)?</summary>
+                        <div class="mt-3 text-light-gray/90">
+                            כן. אנחנו בונים אינטגרציות בין המערכות שכבר יש לכם כדי ליצור זרימת עבודה רציפה: CRM, דוא"ל,
+                            טפסים, וואטסאפ, יומן, דוחות ועוד.
+                        </div>
+                    </details>
+
+                    <details class="glass-card p-5 rounded-2xl border border-gray-700/40 hover-lift">
+                        <summary class="cursor-pointer text-white font-bold">מה ההבדל בין אוטומציה לבין AI?</summary>
+                        <div class="mt-3 text-light-gray/90">
+                            אוטומציה מחברת שלבים ומסירה עבודה ידנית. AI מוסיף שכבת החלטה/ניתוח (סיווג, תעדוף, חיזוי,
+                            תקצור) כדי לשפר תוצאות ולהקטין טעויות.
+                        </div>
+                    </details>
+
+                    <details class="glass-card p-5 rounded-2xl border border-gray-700/40 hover-lift">
+                        <summary class="cursor-pointer text-white font-bold">איך יודעים שהמערכת באמת משתלמת?</summary>
+                        <div class="mt-3 text-light-gray/90">
+                            מגדירים KPI מראש (זמן טיפול, שיעור טעויות, זמן תגובה, עלות תפעולית, המרות/לידים) ובונים
+                            פתרון שמדווח ומאפשר אופטימיזציה לאורך זמן.
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>

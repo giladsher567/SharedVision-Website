@@ -7,7 +7,10 @@
 
     <title>SharedVision AI – AI & Automation Solutions for Business</title>
     <meta name="description"
-        content="SharedVision builds custom AI and automation systems for your business, saving you time, money, and preventing human errors." />
+        content="SharedVision builds custom AI and automation systems for businesses—reducing manual work, improving accuracy, and driving measurable growth." />
+
+    <!-- Robots -->
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://sharedvisionai.org/en/" />
@@ -17,6 +20,10 @@
     <link rel="alternate" hreflang="en" href="https://sharedvisionai.org/en/" />
     <link rel="alternate" hreflang="x-default" href="https://sharedvisionai.org/" />
 
+    <!-- Optional: basic icons (safe, no functional change) -->
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="theme-color" content="#0b0a1a" />
+
     <!-- Open Graph -->
     <meta property="og:title" content="SharedVision AI – AI & Automation Solutions for Business" />
     <meta property="og:description"
@@ -24,10 +31,15 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sharedvisionai.org/en/" />
     <meta property="og:site_name" content="SharedVision AI" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="he_IL" />
 
     <!-- Social share image -->
     <meta property="og:image"
         content="https://r2.flowith.net/files/10df91f6-34a2-4144-8d73-c578804af99f/1753255150860-ChatGPT_Image_Jul_14,_2025,_08_41_21_PM@1024x1024.png" />
+    <meta property="og:image:secure_url"
+        content="https://r2.flowith.net/files/10df91f6-34a2-4144-8d73-c578804af99f/1753255150860-ChatGPT_Image_Jul_14,_2025,_08_41_21_PM@1024x1024.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:alt" content="SharedVision AI - Logo" />
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="1024" />
@@ -54,54 +66,114 @@
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD): Organization + WebSite + WebPage -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://sharedvisionai.org/#organization",
-          "name": "SharedVision AI",
-          "url": "https://sharedvisionai.org/en/",
-          "logo": "https://r2.flowith.net/files/10df91f6-34a2-4144-8d73-c578804af99f/1753255150860-ChatGPT_Image_Jul_14,_2025,_08_41_21_PM@1024x1024.png",
-          "email": "sharedvisionai@gmail.com",
-          "telephone": "+972508522528",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Tel Aviv",
-            "addressCountry": "IL"
-          },
-          "sameAs": [
-            "https://www.instagram.com/sharedvision.ai/",
-            "https://www.facebook.com/profile.php?id=61578927274888&locale=he_IL"
-          ],
-          "contactPoint": [
-            {
-              "@type": "ContactPoint",
-              "contactType": "sales",
-              "email": "sharedvisionai@gmail.com",
-              "telephone": "+972508522528",
-              "availableLanguage": ["he", "en"]
-            }
-          ]
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://sharedvisionai.org/#organization",
+        "name": "SharedVision AI",
+        "url": "https://sharedvisionai.org/",
+        "logo": "https://r2.flowith.net/files/10df91f6-34a2-4144-8d73-c578804af99f/1753255150860-ChatGPT_Image_Jul_14,_2025,_08_41_21_PM@1024x1024.png",
+        "email": "sharedvisionai@gmail.com",
+        "telephone": "+972508522528",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tel Aviv",
+          "addressCountry": "IL"
         },
-        {
-          "@type": "WebSite",
-          "@id": "https://sharedvisionai.org/#website",
-          "url": "https://sharedvisionai.org/en/",
-          "name": "SharedVision AI",
-          "publisher": {
-            "@id": "https://sharedvisionai.org/#organization"
-          },
-          "inLanguage": "en"
+        "sameAs": [
+          "https://www.instagram.com/sharedvision.ai/",
+          "https://www.facebook.com/profile.php?id=61578927274888&locale=he_IL"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "sharedvisionai@gmail.com",
+            "telephone": "+972508522528",
+            "availableLanguage": ["he", "en"]
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sharedvisionai.org/#website",
+        "url": "https://sharedvisionai.org/",
+        "name": "SharedVision AI",
+        "publisher": { "@id": "https://sharedvisionai.org/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://sharedvisionai.org/en/#webpage",
+        "url": "https://sharedvisionai.org/en/",
+        "name": "SharedVision AI – AI & Automation Solutions for Business",
+        "description": "SharedVision builds custom AI and automation systems for businesses—reducing manual work, improving accuracy, and driving measurable growth.",
+        "isPartOf": { "@id": "https://sharedvisionai.org/#website" },
+        "about": { "@id": "https://sharedvisionai.org/#organization" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://r2.flowith.net/files/10df91f6-34a2-4144-8d73-c578804af99f/1753255150860-ChatGPT_Image_Jul_14,_2025,_08_41_21_PM@1024x1024.png"
+        },
+        "inLanguage": "en"
+      }
+    ]
+  }
+  </script>
+
+    <!-- FAQ Schema (unchanged) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What problems do you solve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We help teams reduce manual work, prevent errors, and make faster decisions by combining process automation with an AI layer (prioritization, classification, summarization, forecasting)."
         }
-      ]
-    }
-    </script>
-
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with existing tools like CRM, email, WhatsApp, forms, or calendar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Most projects are built around integrations — connecting your existing systems into one reliable workflow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast can we see results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In many cases, you can see value within weeks: fewer manual tasks, cleaner data flow, and measurable improvements in response time, accuracy, or throughput."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you measure ROI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We define KPIs upfront (time saved, error rate, lead-to-meeting rate, cycle time, SLA compliance) and track them before and after implementation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide implementation and training?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We implement the solution in the field, document it, and train the team until adoption is smooth."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-
 
 <body class="text-light-gray font-assistant">
 
@@ -147,16 +219,41 @@
             <div class="relative z-10 max-w-4xl mx-auto animate-on-scroll mt-24">
                 <h1 class="font-heebo text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6"
                     data-entrance-effect="random">
-                    Stop wasting time on manual work.<br class="hidden md:block" />
-                    <span class="gradient-text">Start growing with smart solutions.</span>
+                    Stop wasting time on manual work<br class="hidden md:block" />
+                    <span class="gradient-text">Start growing with smart systems</span>
                 </h1>
 
                 <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-light-gray">
-                    SharedVision builds custom AI and automation systems for your business, saving you valuable time,
-                    money, and preventing human errors.
-                    We turn operational challenges into growth opportunities.
+                    SharedVision builds custom AI and automation systems for your business. Saving time, reducing
+                    errors,
+                    and improving operational clarity. We turn workflows into measurable growth.
                 </p>
 
+                <!-- Tech identity block (SEO + AI) -->
+                <div class="max-w-3xl mx-auto glass-card p-5 rounded-2xl border border-gray-700/40 mb-8 text-left">
+                    <h2 class="font-heebo text-xl md:text-2xl font-bold text-white mb-3">What we actually do</h2>
+                    <ul class="space-y-2 text-light-gray/90">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-turquoise-tech mt-1"></i>
+                            <span>Process mapping + KPIs: what to measure and what improves.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-turquoise-tech mt-1"></i>
+                            <span>Integrations across your stack (CRM, email, WhatsApp, forms, calendar).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-turquoise-tech mt-1"></i>
+                            <span>Automation + AI layer: prioritization, classification, summarization, forecasting, and
+                                better decisions.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-turquoise-tech mt-1"></i>
+                            <span>Implementation & training: a system that works day-to-day.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Primary CTA -->
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
                     <a href="/en/contact" class="btn btn-primary text-lg px-8 py-4 gradient-border hover-lift">
                         <span class="flex items-center gap-2">
@@ -166,18 +263,34 @@
                     </a>
                 </div>
 
+                <!-- Trust badges -->
                 <div class="flex flex-wrap justify-center gap-6 text-sm glass-card py-3 px-6">
                     <div class="flex items-center gap-2">
                         <i data-lucide="check-circle" class="w-5 h-5 text-turquoise-tech"></i>
-                        <span>No Commitment</span>
+                        <span>No commitment</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <i data-lucide="check-circle" class="w-5 h-5 text-turquoise-tech"></i>
-                        <span>Custom Solutions</span>
+                        <span>Custom solutions</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <i data-lucide="check-circle" class="w-5 h-5 text-turquoise-tech"></i>
-                        <span>Proven ROI</span>
+                        <span>Measure & improve</span>
+                    </div>
+                </div>
+
+                <!-- Trust (logos) -->
+                <div class="mt-8 max-w-3xl mx-auto glass-card p-5 rounded-2xl border border-gray-700/40">
+                    <p class="text-sm text-light-gray/80 mb-3 text-center">Building solutions for leading organizations
+                    </p>
+
+                    <div class="logo-slot" aria-label="Client logos">
+                        <img class="client-logo logo-1"
+                            src="https://play-lh.googleusercontent.com/RA8F-AD5IbLNNO4Qs_ccgi9p1txoZXmR7ZyN1b3Xx_j8pOf0JQkYHMs-zxYkaFLnzwBD=w600-h300-pc0xffffff-pd"
+                            alt="i24NEWS" loading="lazy" />
+
+                        <img class="client-logo logo-2" src="https://he.gadot.com/wp-content/uploads/2020/10/logo-1.png"
+                            alt="Gadot Chemicals" loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -191,10 +304,11 @@
                         Sound Familiar?
                     </h2>
                     <p class="text-lg md:text-xl max-w-3xl mx-auto mb-16 text-light-gray">
-                        Many business owners feel they are working <span class="font-semibold text-white">in</span> the
-                        business instead of
-                        <span class="font-semibold text-white">on</span> the business. We understand the challenges that
-                        prevent you from growing.
+                        Many teams end up working <span class="font-semibold text-white">in</span> the business
+                        instead
+                        of
+                        <span class="font-semibold text-white">on</span> the business. We fix the operational
+                        bottlenecks that block growth.
                     </p>
                 </div>
 
@@ -204,8 +318,9 @@
                             class="w-16 h-16 rounded-full bg-purple-future/20 flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="refresh-cw" class="w-8 h-8 gradient-text"></i>
                         </div>
-                        <h3 class="font-heebo text-xl font-bold text-white mb-2">Clumsy Manual Processes</h3>
-                        <p>Repetitive tasks that consume valuable team time and open the door to errors.</p>
+                        <h3 class="font-heebo text-xl font-bold text-white mb-2">Manual, Fragmented Workflows
+                        </h3>
+                        <p>Repetitive tasks that consume team time and create inconsistencies.</p>
                     </div>
 
                     <div class="card glass-card hover-lift stagger-item opacity-0" style="transform: translateY(20px);">
@@ -213,8 +328,8 @@
                             class="w-16 h-16 rounded-full bg-purple-future/20 flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="timer" class="w-8 h-8 gradient-text"></i>
                         </div>
-                        <h3 class="font-heebo text-xl font-bold text-white mb-2">Wasted Time</h3>
-                        <p>Work hours lost on coordination, data entry, and report generation.</p>
+                        <h3 class="font-heebo text-xl font-bold text-white mb-2">Time Drain</h3>
+                        <p>Hours lost on coordination, data entry, and repetitive reporting.</p>
                     </div>
 
                     <div class="card glass-card hover-lift stagger-item opacity-0" style="transform: translateY(20px);">
@@ -222,8 +337,8 @@
                             class="w-16 h-16 rounded-full bg-purple-future/20 flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="bar-chart-3" class="w-8 h-8 gradient-text"></i>
                         </div>
-                        <h3 class="font-heebo text-xl font-bold text-white mb-2">Lack of Data for Decisions</h3>
-                        <p>Decisions based on gut feeling instead of accurate and reliable information.</p>
+                        <h3 class="font-heebo text-xl font-bold text-white mb-2">Low Visibility</h3>
+                        <p>Decisions made without reliable data and real-time operational signals.</p>
                     </div>
 
                     <div class="card glass-card hover-lift stagger-item opacity-0" style="transform: translateY(20px);">
@@ -231,11 +346,11 @@
                             class="w-16 h-16 rounded-full bg-purple-future/20 flex items-center justify-center mx-auto mb-4">
                             <i data-lucide="alert-triangle" class="w-8 h-8 gradient-text"></i>
                         </div>
-                        <h3 class="font-heebo text-xl font-bold text-white mb-2">Costly Human Errors</h3>
-                        <p>Small mistakes that lead to lost revenue, damage to reputation, and poor customer experience.
-                        </p>
+                        <h3 class="font-heebo text-xl font-bold text-white mb-2">Costly Errors</h3>
+                        <p>Small mistakes that impact revenue, reputation, and customer experience.</p>
                     </div>
                 </div>
+
                 <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
                     <div
                         class="absolute top-20 left-10 w-96 h-96 rounded-full bg-purple-future/10 blur-3xl floating-slow">
@@ -254,15 +369,14 @@
         <section id="services" class="py-12 md:py-16">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto text-center animate-on-scroll">
-                    <h2 class="font-heebo text-3xl md:text-5xl font-bold text-white mb-4">What Do We Build For You?</h2>
+                    <h2 class="font-heebo text-3xl md:text-5xl font-bold text-white mb-4">What Do We Build For
+                        You?</h2>
                     <p class="text-lg md:text-xl text-light-gray">
-                        Choose the direction that suits you — or just come for a chat, and we'll build a solution
-                        together that fits your existing processes.
+                        Choose a direction—or book a short call and we’ll map the fastest path to outcomes.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 animate-on-scroll">
-                    <!-- Card 1 -->
                     <a href="/en/services#svc-ai"
                         class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
                         <div class="flex items-start gap-4">
@@ -270,18 +384,17 @@
                                 <i data-lucide="brain-circuit" class="w-6 h-6 gradient-text"></i>
                             </div>
                             <div class="text-left">
-                                <h3 class="font-heebo text-xl font-bold text-white mb-1">Smart AI Implementation</h3>
-                                <p class="text-sm text-light-gray/80">Insights, prediction, and data-driven decisions.
+                                <h3 class="font-heebo text-xl font-bold text-white mb-1">AI Implementation</h3>
+                                <p class="text-sm text-light-gray/80">Insights, prediction, and data-driven
+                                    decisions.
                                 </p>
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>Details</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <span>Details</span><i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </div>
                     </a>
 
-                    <!-- Card 2 -->
                     <a href="/en/services#svc-auto"
                         class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
                         <div class="flex items-start gap-4">
@@ -290,16 +403,15 @@
                             </div>
                             <div class="text-left">
                                 <h3 class="font-heebo text-xl font-bold text-white mb-1">Process Automation</h3>
-                                <p class="text-sm text-light-gray/80">Save time, reduce errors, and improve service.</p>
+                                <p class="text-sm text-light-gray/80">Save time, reduce errors, improve
+                                    consistency.</p>
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>Details</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <span>Details</span><i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </div>
                     </a>
 
-                    <!-- Card 3 -->
                     <a href="/en/services#svc-consult"
                         class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
                         <div class="flex items-start gap-4">
@@ -307,18 +419,17 @@
                                 <i data-lucide="lightbulb" class="w-6 h-6 gradient-text"></i>
                             </div>
                             <div class="text-left">
-                                <h3 class="font-heebo text-xl font-bold text-white mb-1">Strategic Tech Consulting</h3>
-                                <p class="text-sm text-light-gray/80">Roadmap, tool selection, and proper
-                                    implementation.</p>
+                                <h3 class="font-heebo text-xl font-bold text-white mb-1">Strategic Tech
+                                    Consulting</h3>
+                                <p class="text-sm text-light-gray/80">Roadmap, tool selection, implementation.
+                                </p>
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>Details</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <span>Details</span><i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </div>
                     </a>
 
-                    <!-- Card 4 -->
                     <a href="/en/services#svc-chatbots"
                         class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
                         <div class="flex items-start gap-4">
@@ -326,18 +437,17 @@
                                 <i data-lucide="messages-square" class="w-6 h-6 gradient-text"></i>
                             </div>
                             <div class="text-left">
-                                <h3 class="font-heebo text-xl font-bold text-white mb-1">Chatbots & Auto Service</h3>
-                                <p class="text-sm text-light-gray/80">Fast response, lead management, and service
-                                    processes.</p>
+                                <h3 class="font-heebo text-xl font-bold text-white mb-1">Chatbots & Auto Service
+                                </h3>
+                                <p class="text-sm text-light-gray/80">Fast response, lead routing, support
+                                    flows.</p>
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>Details</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <span>Details</span><i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </div>
                     </a>
 
-                    <!-- Card 5 -->
                     <a href="/en/services#svc-crm"
                         class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
                         <div class="flex items-start gap-4">
@@ -346,17 +456,15 @@
                             </div>
                             <div class="text-left">
                                 <h3 class="font-heebo text-xl font-bold text-white mb-1">Custom CRM Systems</h3>
-                                <p class="text-sm text-light-gray/80">Pipeline, tasks, documentation, and full
-                                    transparency.</p>
+                                <p class="text-sm text-light-gray/80">Pipeline, tasks, dashboards, automation.
+                                </p>
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>Details</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <span>Details</span><i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </div>
                     </a>
 
-                    <!-- Card 6 -->
                     <a href="/en/services#svc-video"
                         class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift transition">
                         <div class="flex items-start gap-4">
@@ -364,16 +472,78 @@
                                 <i data-lucide="video" class="w-6 h-6 gradient-text"></i>
                             </div>
                             <div class="text-left">
-                                <h3 class="font-heebo text-xl font-bold text-white mb-1">Smart Video Systems</h3>
-                                <p class="text-sm text-light-gray/80">Content repurposing + archive and editing
+                                <h3 class="font-heebo text-xl font-bold text-white mb-1">Smart Video Systems
+                                </h3>
+                                <p class="text-sm text-light-gray/80">Repurposing, archive, and editing
                                     assistant.</p>
                             </div>
                         </div>
                         <div class="mt-4 inline-flex items-center gap-2 text-sm text-turquoise-tech">
-                            <span>Details</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            <span>Details</span><i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </div>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (SEO + AI) -->
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-4 animate-on-scroll">
+                <div class="max-w-3xl mx-auto text-center mb-10">
+                    <h2 class="font-heebo text-3xl md:text-5xl font-bold text-white mb-4">FAQ</h2>
+                    <p class="text-lg md:text-xl text-light-gray">
+                        Short answers to the most common questions. If you’re not sure where to start — book a
+                        call.
+                    </p>
+                </div>
+
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <details class="glass-card p-5 rounded-2xl border border-gray-700/40">
+                        <summary class="cursor-pointer font-bold text-white">What problems do you solve?
+                        </summary>
+                        <p class="mt-3 text-light-gray/90">
+                            We help teams reduce manual work, prevent errors, and make faster decisions by
+                            combining process automation
+                            with an AI layer (prioritization, classification, summarization, forecasting).
+                        </p>
+                    </details>
+
+                    <details class="glass-card p-5 rounded-2xl border border-gray-700/40">
+                        <summary class="cursor-pointer font-bold text-white">Do you work with existing tools
+                            like CRM, email, WhatsApp, forms, or calendar?</summary>
+                        <p class="mt-3 text-light-gray/90">
+                            Yes. Most projects are built around integrations — connecting your existing systems
+                            into one reliable workflow.
+                        </p>
+                    </details>
+
+                    <details class="glass-card p-5 rounded-2xl border border-gray-700/40">
+                        <summary class="cursor-pointer font-bold text-white">How fast can we see results?
+                        </summary>
+                        <p class="mt-3 text-light-gray/90">
+                            In many cases, you can see value within weeks: fewer manual tasks, cleaner data
+                            flow, and measurable improvements
+                            in response time, accuracy, or throughput.
+                        </p>
+                    </details>
+
+                    <details class="glass-card p-5 rounded-2xl border border-gray-700/40">
+                        <summary class="cursor-pointer font-bold text-white">How do you measure ROI?</summary>
+                        <p class="mt-3 text-light-gray/90">
+                            We define KPIs upfront (time saved, error rate, lead-to-meeting rate, cycle time,
+                            SLA compliance) and track them
+                            before and after implementation.
+                        </p>
+                    </details>
+
+                    <details class="glass-card p-5 rounded-2xl border border-gray-700/40">
+                        <summary class="cursor-pointer font-bold text-white">Do you provide implementation and
+                            training?</summary>
+                        <p class="mt-3 text-light-gray/90">
+                            Yes. We implement the solution in the field, document it, and train the team until
+                            adoption is smooth.
+                        </p>
+                    </details>
                 </div>
             </div>
         </section>
@@ -401,8 +571,9 @@
                         </h2>
                         <p
                             class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-light-gray glass-card p-4 rounded-xl inline-block">
-                            The first step to change starts with a conversation. Let's examine together how custom
-                            technology can help you too.
+                            The first step starts with a conversation. Let’s map where AI and automation will
+                            create the
+                            most impact.
                         </p>
                     </div>
 
@@ -410,7 +581,8 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                             <div class="text-center md:text-left stagger-item opacity-0"
                                 style="transform: translateY(20px);">
-                                <h3 class="font-heebo text-2xl font-bold text-white mb-4 gradient-text">Book a Free
+                                <h3 class="font-heebo text-2xl font-bold text-white mb-4 gradient-text">Book a
+                                    Free
                                     Consultation</h3>
                                 <ul class="space-y-3 mb-6">
                                     <li class="flex items-center gap-3 text-light-gray">
@@ -426,7 +598,7 @@
                                     <li class="flex items-center gap-3 text-light-gray">
                                         <i data-lucide="check-circle"
                                             class="w-5 h-5 text-turquoise-tech flex-shrink-0 pulse"></i>
-                                        <span>Propose solutions tailored to your challenges</span>
+                                        <span>Clear next steps and a practical plan</span>
                                     </li>
                                     <li class="flex items-center gap-3 text-light-gray">
                                         <i data-lucide="check-circle"
@@ -443,9 +615,10 @@
                                     <div class="flex items-center gap-3">
                                         <i data-lucide="sparkles" class="w-10 h-10 gradient-text"></i>
                                         <div class="text-left">
-                                            <p class="font-bold text-white text-lg">Short consultation. Immediate
-                                                insights.</p>
-                                            <p class="text-sm text-light-gray">We'll identify automation and AI
+                                            <p class="font-bold text-white text-lg">Short consultation.
+                                                Immediate
+                                                clarity.</p>
+                                            <p class="text-sm text-light-gray">We’ll pinpoint automation + AI
                                                 opportunities that fit your business.</p>
                                         </div>
                                     </div>
@@ -475,8 +648,8 @@
                 <div class="md:col-span-2">
                     <h3 class="text-white font-bold text-xl mb-4 gradient-text">SharedVision</h3>
                     <p class="text-light-gray mb-6 max-w-md glass-card p-4 rounded-xl">
-                        We specialize in advanced technological solutions for businesses, with an emphasis on
-                        automation, artificial intelligence, and strategic consulting.
+                        We build advanced systems for businesses—with an emphasis on automation, AI, and strategic
+                        execution.
                     </p>
 
                     <div class="flex gap-4">
@@ -508,6 +681,10 @@
                             <a href="/en/contact"
                                 class="text-light-gray hover:text-turquoise-tech transition-colors hover-lift inline-block">Contact</a>
                         </li>
+                        <li>
+                            <a href="/en/#faq"
+                                class="text-light-gray hover:text-turquoise-tech transition-colors hover-lift inline-block">FAQ</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -522,7 +699,7 @@
                         <li class="flex items-center gap-2 text-light-gray">
                             <i data-lucide="phone" class="w-5 h-5 text-turquoise-tech pulse"></i>
                             <a href="tel:+972508522528"
-                                class="hover:text-turquoise-tech transition-colors hover-lift inline-block">050-852-2528</a>
+                                class="hover:text-turquoise-tech transition-colors hover-lift inline-block">+972-50-852-2528</a>
                         </li>
                         <li class="flex items-start gap-2 text-light-gray">
                             <i data-lucide="map-pin" class="w-5 h-5 text-turquoise-tech mt-1 pulse"></i>

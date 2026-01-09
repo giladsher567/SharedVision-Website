@@ -471,3 +471,76 @@ textarea.form-input {
         transform: scale(1);
     }
 }
+
+/* === TRUST LOGOS – 2 LOGOS, CONTINUOUS, MINIMAL GAPS === */
+
+.logo-slot {
+    --slot-w: 220px;
+    --slot-h: 90px;
+    --speed: 20s;
+
+    /* חשוב: מרחק נסיעה קצר יותר => פחות "ריק" */
+    --travel: calc((var(--slot-w) / 2) + 40px);
+
+    width: var(--slot-w);
+    height: var(--slot-h);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    /* קצוות רכים (אם עדיין נעלם מהר מדי, נרחיב בשלב הבא) */
+    mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+
+@media (min-width: 768px) {
+    .logo-slot {
+        --slot-w: 280px;
+        --slot-h: 110px;
+        --speed: 20s;
+        --travel: calc((var(--slot-w) / 2) + 60px);
+    }
+}
+
+.logo-slot .client-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 72%;
+    max-width: 92%;
+    width: auto;
+    object-fit: contain;
+
+    will-change: transform, opacity;
+    transform: translate(-50%, -50%) translateX(var(--travel));
+    opacity: 0;
+
+    animation: logo-fly var(--speed) linear infinite;
+}
+
+.logo-slot .logo-2 {
+    animation-delay: calc(var(--speed) / -2);
+}
+
+@keyframes logo-fly {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateX(var(--travel));
+    }
+
+    49.999% {
+        opacity: 1;
+        transform: translate(-50%, -50%) translateX(calc(-1 * var(--travel)));
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateX(var(--travel));
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateX(var(--travel));
+    }
+}
