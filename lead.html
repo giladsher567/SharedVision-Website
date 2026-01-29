@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SharedVision - בדיקה קצרה לבעלי עסקים</title>
+    <meta name="description" content="בדיקה קצרה שתראה איפה פניות נופלות בדרך — ומה אפשר לסדר בלי להפוך את העסק." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Heebo:wght@700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Site styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        /* Keep URL clean + avoid JS-less jump; smooth scroll handled by JS */
+        html {
+            scroll-behavior: auto;
+        }
+
+        /* Force default cursor on landing page */
+        body {
+            cursor: auto !important;
+
+            /* Better mobile performance */
+            background-attachment: initial;
+            overflow-x: hidden;
+
+            /* Layout */
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 16px;
+
+            font-family: 'Assistant', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        }
+
+        @media (min-width: 640px) {
+            body {
+                justify-content: center;
+            }
+        }
+
+        main {
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-wrapper {
+            background: rgba(10, 10, 20, 0.6);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @media (min-width: 768px) {
+            .hero-wrapper {
+                padding: 3rem;
+                margin-top: 5vh;
+            }
+        }
+
+        h1 {
+            font-family: 'Heebo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            font-weight: 800;
+            font-size: 1.9rem;
+            line-height: 1.15;
+            margin: 0 0 1.5rem;
+            color: #fff;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        .main-text {
+            font-size: 1.08rem;
+            line-height: 1.75;
+            color: rgba(229, 231, 235, 0.95);
+            margin: 0 0 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .main-text {
+                font-size: 1.25rem;
+            }
+        }
+
+        .main-text p {
+            margin: 0 0 1.25rem;
+        }
+
+        .cta-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trust-line {
+            font-size: 0.9rem;
+            color: rgba(156, 163, 175, 0.95);
+            margin-top: 0.5rem;
+        }
+
+        /* Form section spacing */
+        #form {
+            margin-top: 24px;
+            margin-bottom: 56px;
+
+            /* So scroll lands nicely */
+            scroll-margin-top: 24px;
+        }
+
+        .lead-card {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(165, 79, 245, 0.30);
+            box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
+        }
+
+        @media (min-width: 768px) {
+            .lead-card {
+                padding: 32px;
+            }
+        }
+
+        .lead-title {
+            font-family: 'Heebo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: #fff;
+            margin: 0 0 18px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .lead-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        form {
+            text-align: right;
+        }
+
+        .field {
+            margin-bottom: 14px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: rgba(229, 231, 235, 0.95);
+            margin: 0 0 8px;
+        }
+
+        /* Form Inputs - High Contrast */
+        .lead-input {
+            width: 100%;
+            background-color: #ffffff !important;
+            color: #111111 !important;
+            border: 2px solid #e2e4e9 !important;
+            border-radius: 10px;
+            padding: 12px 14px;
+            outline: none;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+            font-size: 1rem;
+            box-sizing: border-box;
+            font-family: 'Assistant', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        }
+
+        .lead-input:focus {
+            border-color: var(--color-purple, #a54ff5) !important;
+            box-shadow: 0 0 0 3px rgba(165, 79, 245, 0.2) !important;
+        }
+
+        .lead-input::placeholder {
+            color: #6b7280 !important;
+        }
+
+        /* Make CTA look good even if btn styles vary */
+        .cta-boost {
+            display: inline-block;
+            width: 100%;
+            max-width: 520px;
+            padding: 16px 22px;
+            font-size: 1.15rem;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .cta-boost {
+                width: auto;
+                max-width: none;
+                font-size: 1.25rem;
+            }
+        }
+
+        .cta-boost:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+        }
+
+        .submit-wrap {
+            padding-top: 6px;
+            text-align: center;
+        }
+
+        .after-submit {
+            font-size: 0.9rem;
+            color: rgba(156, 163, 175, 0.95);
+            margin: 12px 0 0;
+        }
+
+        .after-submit-2 {
+            font-size: 0.9rem;
+            color: rgba(156, 163, 175, 0.95);
+            margin: 8px 0 0;
+        }
+
+        /* Phone input: keep numbers natural */
+        input[type="tel"] {
+            direction: ltr;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <!-- HERO -->
+        <div class="hero-wrapper animate-on-scroll animate-in">
+            <h1>מרגיש שפספסת לקוחות, אבל לא יודע איפה?</h1>
+
+            <div class="main-text">
+                <p>
+                    נכנסות פניות מלקוחות במהלך היום.<br>
+                    לא תמיד בזמן נוח,<br>
+                    לא תמיד כשאפשר לעצור ולהתעמק.
+                </p>
+
+                <p>
+                    בין הודעה ראשונה<br>
+                    לשיחה או סגירה,<br>
+                    יש לא מעט מקום לדברים להתפספס.
+                </p>
+
+                <p>
+                    אני עוזר לבעלי עסקים<br>
+                    לבנות מענה ותהליך לפניות<br>
+                    שעובדים בשבילך לאורך היום,<br>
+                    כדי שלידים לא ילכו לאיבוד<br>
+                    וכדי שיותר פניות יהפכו ללקוחות.
+                </p>
+            </div>
+
+            <!-- CTA (NO hash change) -->
+            <div class="cta-wrap">
+                <button type="button" class="btn btn-primary cta-boost" id="scrollToFormBtn">
+                    בדיקה קצרה – לראות אם זה מתאים
+                </button>
+
+                <span class="trust-line">שיחה קצרה, בלי התחייבות.</span>
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <div id="form" class="animate-on-scroll animate-in" style="animation-delay: 0.2s;">
+            <div class="glass-card lead-card">
+                <h2 class="lead-title">בדיקה קצרה – משאירים פרטים ונחזור אליך</h2>
+
+                <form action="https://formspree.io/f/mpqwwgyd" method="POST">
+                    <input type="hidden" name="source" value="lead-page" />
+
+                    <div class="field">
+                        <label for="name">שם מלא</label>
+                        <input type="text" id="name" name="name" required autocomplete="name" class="lead-input"
+                            placeholder="לדוגמה: ישראל ישראלי" />
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">טלפון</label>
+                        <input type="tel" id="phone" name="phone" required inputmode="tel" autocomplete="tel"
+                            class="lead-input" placeholder="050-1234567" />
+                    </div>
+
+                    <div class="field">
+                        <label for="note">באיזה תחום העסק, ואיפה הכי מתפספסות פניות היום?</label>
+                        <textarea id="note" name="note" rows="3" class="lead-input"
+                            placeholder="לדוגמה: וואטסאפ ללא מענה / שיחות שלא חוזרים אליהן / טפסים ללא המשך ..."></textarea>
+                    </div>
+
+                    <div class="submit-wrap">
+                        <button type="submit" class="btn btn-primary cta-boost" style="width:100%; max-width:520px;">
+                            בדיקה קצרה – לראות אם זה מתאים
+                        </button>
+
+                        <p class="after-submit">חוזרים אליך לשיחה קצרה. בלי התחייבות.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Minimal JS: smooth scroll WITHOUT changing the URL -->
+    <script>
+        (function () {
+            // If the page ever loads with a hash, remove it to keep URL clean and avoid any jump
+            if (window.location.hash) {
+                history.replaceState(null, "", window.location.pathname + window.location.search);
+            }
+
+            const btn = document.getElementById("scrollToFormBtn");
+            const target = document.getElementById("form");
+            const nameInput = document.getElementById("name");
+
+            if (!btn || !target) return;
+
+            btn.addEventListener("click", function () {
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+                // Optional: focus first field without causing additional scrolling "jump"
+                if (nameInput) {
+                    setTimeout(() => {
+                        try {
+                            nameInput.focus({ preventScroll: true });
+                        } catch (e) {
+                            nameInput.focus();
+                        }
+                    }, 350);
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
