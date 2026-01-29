@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SharedVision - בדיקה קצרה לבעלי עסקים</title>
+    <meta name="description" content="בדיקה קצרה שתראה איפה פניות נופלות בדרך — ומה אפשר לסדר בלי להפוך את העסק." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Heebo:wght@700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Site styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        /* Keep URL clean + avoid JS-less jump; smooth scroll handled by JS */
+        html {
+            scroll-behavior: auto;
+        }
+
+        /* Force default cursor on landing page */
+        body {
+            cursor: auto !important;
+
+            /* Better mobile performance */
+            background-attachment: initial;
+            overflow-x: hidden;
+
+            /* Layout */
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 16px;
+
+            font-family: 'Assistant', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        }
+
+        @media (min-width: 640px) {
+            body {
+                justify-content: center;
+            }
+        }
+
+        main {
+            width: 100%;
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-wrapper {
+            background: rgba(10, 10, 20, 0.6);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @media (min-width: 768px) {
+            .hero-wrapper {
+                padding: 3rem;
+                margin-top: 5vh;
+            }
+        }
+
+        h1 {
+            font-family: 'Heebo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            font-weight: 800;
+            font-size: 2rem;
+            line-height: 1.15;
+            margin: 0 0 1.5rem;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        .main-text {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #f3f4f6;
+            /* slate-100 equivalent */
+            font-weight: 500;
+            /* Medium weight */
+            margin: 0 0 2rem;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (min-width: 768px) {
+            .main-text {
+                font-size: 1.35rem;
+                /* Increased size */
+            }
+        }
+
+        .main-text p {
+            margin: 0 0 1.25rem;
+        }
+
+        .cta-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trust-line {
+            font-size: 0.9rem;
+            color: rgba(229, 231, 235, 0.9);
+            margin-top: 0.5rem;
+        }
+
+        /* Form section spacing */
+        #form {
+            margin-top: 24px;
+            margin-bottom: 56px;
+
+            /* So scroll lands nicely */
+            scroll-margin-top: 24px;
+        }
+
+        .lead-card {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(165, 79, 245, 0.30);
+            box-shadow: 0 12px 34px rgba(0, 0, 0, 0.35);
+            background: rgba(10, 10, 20, 0.75);
+            backdrop-filter: blur(10px);
+        }
+
+        @media (min-width: 768px) {
+            .lead-card {
+                padding: 32px;
+            }
+        }
+
+        .lead-title {
+            font-family: 'Heebo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            font-weight: 800;
+            font-size: 1.35rem;
+            color: #fff;
+            margin: 0 0 18px;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .lead-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        form {
+            text-align: right;
+        }
+
+        .field {
+            margin-bottom: 14px;
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 8px;
+        }
+
+        /* Form Inputs - High Contrast */
+        .lead-input {
+            width: 100%;
+            background-color: #ffffff !important;
+            color: #111111 !important;
+            border: 2px solid #e2e4e9 !important;
+            border-radius: 10px;
+            padding: 14px 16px;
+            /* Larger padding */
+            outline: none;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+            font-size: 1.05rem;
+            font-weight: 500;
+            box-sizing: border-box;
+            font-family: 'Assistant', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        }
+
+        .lead-input:focus {
+            border-color: var(--color-purple, #a54ff5) !important;
+            box-shadow: 0 0 0 3px rgba(165, 79, 245, 0.2) !important;
+        }
+
+        .lead-input::placeholder {
+            color: #6b7280 !important;
+            font-weight: 400;
+        }
+
+        /* Make CTA look good even if btn styles vary */
+        .cta-boost {
+            display: inline-block;
+            width: 100%;
+            max-width: 520px;
+            padding: 16px 22px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .cta-boost {
+                width: auto;
+                max-width: none;
+                font-size: 1.25rem;
+            }
+        }
+
+        .cta-boost:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+        }
+
+        .submit-wrap {
+            padding-top: 6px;
+            text-align: center;
+        }
+
+        .after-submit {
+            font-size: 0.95rem;
+            color: rgba(229, 231, 235, 0.8);
+            margin: 12px 0 0;
+        }
+
+        /* Success Message Handling */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(16, 185, 129, 0.2);
+            /* green-500/20 */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            color: #10b981;
+            /* green-500 */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <!-- HERO -->
+        <div class="hero-wrapper animate-on-scroll animate-in">
+            <h1>מרגיש שפספסת לקוחות, אבל לא יודע איפה?</h1>
+
+            <div class="main-text">
+                <p>
+                    נכנסות פניות מלקוחות במהלך היום.<br>
+                    לא תמיד בזמן נוח,<br>
+                    לא תמיד כשאפשר לעצור ולהתעמק.
+                </p>
+
+                <p>
+                    בין הודעה ראשונה<br>
+                    לשיחה או סגירה,<br>
+                    יש לא מעט מקום לדברים להתפספס.
+                </p>
+
+                <p>
+                    אני עוזר לבעלי עסקים<br>
+                    לבנות מענה ותהליך לפניות<br>
+                    שעובדים בשבילך לאורך היום,<br>
+                    כדי שלידים לא ילכו לאיבוד<br>
+                    וכדי שיותר פניות יהפכו ללקוחות.
+                </p>
+            </div>
+
+            <!-- CTA (NO hash change) -->
+            <div class="cta-wrap">
+                <button type="button" class="btn btn-primary cta-boost" id="scrollToFormBtn">
+                    בדיקה קצרה – לראות אם זה מתאים
+                </button>
+
+                <span class="trust-line">שיחה קצרה, בלי התחייבות.</span>
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <div id="form" class="animate-on-scroll animate-in" style="animation-delay: 0.2s;">
+            <div class="glass-card lead-card">
+
+                <!-- Form Container -->
+                <div id="lead-form-container">
+                    <h2 class="lead-title">בדיקה קצרה – משאירים פרטים ונחזור אליך</h2>
+
+                    <form id="lead-form" action="https://formspree.io/f/mpqwwgyd" method="POST">
+                        <input type="hidden" name="source" value="lead-page" />
+
+                        <div class="field">
+                            <label for="name">שם מלא</label>
+                            <input type="text" id="name" name="name" required autocomplete="name" class="lead-input"
+                                placeholder="לדוגמה: ישראל ישראלי" />
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">טלפון</label>
+                            <input type="tel" id="phone" name="phone" required inputmode="tel" autocomplete="tel"
+                                class="lead-input" placeholder="050-1234567" />
+                        </div>
+
+                        <div class="field">
+                            <label for="note">באיזה תחום העסק, ואיפה הכי מתפספסות פניות היום?</label>
+                            <textarea id="note" name="note" rows="3" class="lead-input"
+                                placeholder="לדוגמה: וואטסאפ ללא מענה / שיחות שלא חוזרים אליהן / טפסים ללא המשך ..."></textarea>
+                        </div>
+
+                        <div class="submit-wrap">
+                            <button type="submit" class="btn btn-primary cta-boost"
+                                style="width:100%; max-width:520px;">
+                                בדיקה קצרה – לראות אם זה מתאים
+                            </button>
+
+                            <p class="after-submit">חוזרים אליך לשיחה קצרה. בלי התחייבות.</p>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message" class="success-message">
+                    <div class="success-icon">
+                        <!-- Simple Checkmark SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h2 class="font-heebo text-2xl md:text-3xl font-bold text-white mb-4">הפרטים נשלחו בהצלחה!</h2>
+                    <p class="text-lg text-gray-200 mb-8">
+                        תודה שפנית אלינו. נחזור אליך בהקדם האפשרי לשיחה קצרה.
+                    </p>
+                    <a href="/"
+                        class="btn btn-secondary px-8 py-3 text-lg font-bold inline-block hover:bg-purple-600/20 transition-colors">
+                        מעבר לעמוד הבית
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Logic: Smooth Scroll + AJAX Form -->
+    <script>
+        (function () {
+            // 1. Smooth Scroll Setup
+            if (window.location.hash) {
+                history.replaceState(null, "", window.location.pathname + window.location.search);
+            }
+
+            const btn = document.getElementById("scrollToFormBtn");
+            const target = document.getElementById("form");
+            const nameInput = document.getElementById("name");
+
+            if (btn && target) {
+                btn.addEventListener("click", function () {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    if (nameInput) {
+                        setTimeout(() => {
+                            try { nameInput.focus({ preventScroll: true }); }
+                            catch (e) { nameInput.focus(); }
+                        }, 350);
+                    }
+                });
+            }
+
+            // 2. AJAX Form Submission
+            const form = document.getElementById("lead-form");
+            const formContainer = document.getElementById("lead-form-container");
+            const successMsg = document.getElementById("success-message");
+            const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
+
+            if (form) {
+                async function handleSubmit(event) {
+                    event.preventDefault();
+                    if (!submitBtn) return;
+
+                    const originalText = submitBtn.innerText;
+                    submitBtn.disabled = true;
+                    submitBtn.innerText = "שולח...";
+
+                    const data = new FormData(event.target);
+
+                    try {
+                        const response = await fetch(event.target.action, {
+                            method: form.method,
+                            body: data,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            // Success!
+                            form.reset();
+                            formContainer.style.display = "none";
+                            successMsg.style.display = "block";
+                            // Scroll to success message if needed, though likely already in view
+                            successMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+                        } else {
+                            // Error from Formspree
+                            const jsonData = await response.json();
+                            let msg = "אירעה שגיאה בשליחה. אנא נסו שנית.";
+                            if (Object.hasOwn(jsonData, 'errors')) {
+                                msg = jsonData["errors"].map(error => error["message"]).join(", ");
+                            }
+                            alert(msg);
+                            submitBtn.disabled = false;
+                            submitBtn.innerText = originalText;
+                        }
+                    } catch (error) {
+                        // Network error
+                        console.error('Submission error:', error);
+                        alert("אירעה שגיאה. אנא בדקו את החיבור ונסו שנית.");
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = originalText;
+                    }
+                }
+                form.addEventListener("submit", handleSubmit);
+            }
+        })();
+    </script>
+
+
+</body>
+
+</html>

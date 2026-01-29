@@ -16,6 +16,10 @@
             "destination": "/contact.html"
         },
         {
+            "source": "/lead",
+            "destination": "/lead.html"
+        },
+        {
             "source": "/en/services",
             "destination": "/en/services.html"
         },

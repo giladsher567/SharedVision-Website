@@ -236,7 +236,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Set loading state
       submitButton.disabled = true;
-      submitButton.textContent = isEN ? 'Sending...' : 'שולח...';
+      submitButton.innerHTML = isEN
+        ? '<i data-lucide="loader-2" class="w-5 h-5 animate-spin mx-auto"></i>'
+        : '<i data-lucide="loader-2" class="w-5 h-5 animate-spin mx-auto"></i>';
+      lucide.createIcons();
 
       try {
         const formData = new FormData(contactForm);

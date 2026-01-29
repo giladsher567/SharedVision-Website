@@ -7,12 +7,13 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        // Hebrew
+        // Hebrew Pages
         index: resolve(__dirname, "index.html"),
         services: resolve(__dirname, "services.html"),
         contact: resolve(__dirname, "contact.html"),
+        lead: resolve(__dirname, "lead.html"), // הוספנו את זה
 
-        // English (nested output to dist/en/*)
+        // English Pages
         "en/index": resolve(__dirname, "en/index.html"),
         "en/services": resolve(__dirname, "en/services.html"),
         "en/contact": resolve(__dirname, "en/contact.html"),

@@ -262,13 +262,13 @@
                                     <div class="space-y-2">
                                         <label for="name" class="text-sm font-medium text-light-gray">שם מלא</label>
                                         <input type="text" id="name" name="name" required
-                                            class="w-full bg-space-light/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-turquoise-tech focus:ring-1 focus:ring-turquoise-tech transition-colors"
+                                            class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-slate-600 transition-colors"
                                             placeholder="ישראל ישראלי">
                                     </div>
                                     <div class="space-y-2">
                                         <label for="phone" class="text-sm font-medium text-light-gray">טלפון</label>
                                         <input type="tel" id="phone" name="phone" required
-                                            class="w-full bg-space-light/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-turquoise-tech focus:ring-1 focus:ring-turquoise-tech transition-colors"
+                                            class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-slate-600 transition-colors"
                                             placeholder="050-0000000">
                                     </div>
                                 </div>
@@ -276,27 +276,33 @@
                                 <div class="space-y-2">
                                     <label for="email" class="text-sm font-medium text-light-gray">אימייל</label>
                                     <input type="email" id="email" name="email" required
-                                        class="w-full bg-space-light/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-turquoise-tech focus:ring-1 focus:ring-turquoise-tech transition-colors"
+                                        class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-slate-600 transition-colors"
                                         placeholder="your@email.com">
                                 </div>
 
                                 <div class="space-y-2">
                                     <label for="service" class="text-sm font-medium text-light-gray">נושא הפנייה</label>
                                     <select id="service" name="service"
-                                        class="w-full bg-space-light/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-turquoise-tech focus:ring-1 focus:ring-turquoise-tech transition-colors appearance-none">
-                                        <option value="" disabled selected>בחר נושא...</option>
-                                        <option value="consulting">ייעוץ אסטרטגי</option>
-                                        <option value="automation">אוטומציה עסקית</option>
-                                        <option value="ai">פתרונות AI</option>
-                                        <option value="chatbots">צ'אטבוטים</option>
-                                        <option value="other">אחר</option>
+                                        class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-slate-600 transition-colors appearance-none">
+                                        <option value="" disabled selected
+                                            style="background-color: #020617; color: white;">בחר נושא...</option>
+                                        <option value="consulting" style="background-color: #020617; color: white;">
+                                            ייעוץ אסטרטגי</option>
+                                        <option value="automation" style="background-color: #020617; color: white;">
+                                            אוטומציה עסקית</option>
+                                        <option value="ai" style="background-color: #020617; color: white;">פתרונות AI
+                                        </option>
+                                        <option value="chatbots" style="background-color: #020617; color: white;">
+                                            צ'אטבוטים</option>
+                                        <option value="other" style="background-color: #020617; color: white;">אחר
+                                        </option>
                                     </select>
                                 </div>
 
                                 <div class="space-y-2">
                                     <label for="message" class="text-sm font-medium text-light-gray">הודעה</label>
                                     <textarea id="message" name="message" rows="4" required
-                                        class="w-full bg-space-light/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-turquoise-tech focus:ring-1 focus:ring-turquoise-tech transition-colors resize-none"
+                                        class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-slate-600 transition-colors resize-none"
                                         placeholder="ספרו לנו קצת על העסק ועל האתגר שתרצו לפתור..."></textarea>
                                 </div>
 
@@ -307,6 +313,22 @@
 
                                 <p id="form-status" class="text-center text-sm mt-4 hidden"></p>
                             </form>
+
+                            <!-- Success Message (Happy State) -->
+                            <div id="form-success-message"
+                                class="hidden text-center py-10 animate-in fade-in zoom-in duration-500">
+                                <div
+                                    class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i data-lucide="check" class="w-10 h-10 text-green-500"></i>
+                                </div>
+                                <h3 class="font-heebo text-2xl font-bold text-white mb-4">ההודעה נשלחה בהצלחה!</h3>
+                                <p class="text-light-gray text-lg mb-8">
+                                    תודה שפנית אלינו. קיבלנו את הפרטים ונחזור אליך בהקדם האפשרי.
+                                </p>
+                                <button onclick="window.location.reload()" class="btn btn-secondary px-8 py-2">
+                                    שלח הודעה נוספת
+                                </button>
+                            </div>
                         </div>
                     </div>
 
