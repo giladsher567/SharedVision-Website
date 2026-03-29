@@ -2,6 +2,88 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initialize Lucide icons
   lucide.createIcons();
 
+  // === Space video background — palindrome loop + cross-page continuity ===
+  const bgWrap = document.createElement('div');
+  bgWrap.setAttribute('aria-hidden', 'true');
+  bgWrap.style.cssText =
+    'position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:#07081a';
+
+  const vid = document.createElement('video');
+  vid.src = '/space_bg_loop.mp4';
+  vid.muted = true;
+  vid.loop  = true;
+  vid.setAttribute('playsinline', '');
+  vid.preload = 'auto';
+  vid.style.cssText =
+    'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;' +
+    'filter:contrast(1.25) brightness(0.95) saturate(1.4)';
+  bgWrap.appendChild(vid);
+
+  // Dark overlay for text legibility
+  const bgOverlay = document.createElement('div');
+  bgOverlay.style.cssText = 'position:absolute;inset:0;background:rgba(3,4,14,0.78)';
+  bgWrap.appendChild(bgOverlay);
+
+  // Logo watermark — background removed via canvas
+  const logoCanvas = document.createElement('canvas');
+  logoCanvas.style.cssText =
+    'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);' +
+    'width:26%;max-width:360px;min-width:140px;opacity:0.22;' +
+    'mix-blend-mode:screen;' +
+    'filter:drop-shadow(0 0 24px rgba(165,79,245,0.5)) drop-shadow(0 0 8px rgba(51,212,241,0.3))';
+  bgWrap.appendChild(logoCanvas);
+
+  const _src = new Image();
+  _src.crossOrigin = 'anonymous';
+  _src.onload = () => {
+    logoCanvas.width  = _src.naturalWidth;
+    logoCanvas.height = _src.naturalHeight;
+    const lCtx = logoCanvas.getContext('2d');
+    lCtx.drawImage(_src, 0, 0);
+
+    const img = lCtx.getImageData(0, 0, logoCanvas.width, logoCanvas.height);
+    const d   = img.data;
+
+    // Sample background colour from top-left corner
+    const bgR = d[0], bgG = d[1], bgB = d[2];
+    const TOLERANCE = 65;
+
+    for (let i = 0; i < d.length; i += 4) {
+      const dist = Math.sqrt(
+        (d[i]   - bgR) ** 2 +
+        (d[i+1] - bgG) ** 2 +
+        (d[i+2] - bgB) ** 2
+      );
+      if (dist < TOLERANCE) {
+        // Smooth edge fade instead of hard cut
+        d[i+3] = Math.round((dist / TOLERANCE) * 120);
+      }
+    }
+    lCtx.putImageData(img, 0, 0);
+  };
+  _src.src = '/logo.png';
+
+  document.body.insertAdjacentElement('afterbegin', bgWrap);
+
+  // Resume from where we left off — feels continuous across page changes
+  const savedTime = parseFloat(sessionStorage.getItem('bgVidTime') || '0');
+  if (savedTime > 0) vid.currentTime = savedTime;
+
+  window.addEventListener('beforeunload', () => {
+    sessionStorage.setItem('bgVidTime', String(vid.currentTime));
+  });
+
+  vid.addEventListener('canplay', () => {
+    vid.style.transition = 'opacity 0.9s ease';
+    vid.style.opacity    = '1';
+  }, { once: true });
+  vid.play().catch(() => {});
+
+  // Register service worker to cache video after first load
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  }
+
   // -----------------------------
   // Language-aware routing helpers
   // -----------------------------
@@ -155,35 +237,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Custom cursor effect
   const createCustomCursor = () => {
-    // Only create on desktop devices
     if (window.innerWidth < 1024) return;
 
-    const cursor = document.createElement('div');
-    cursor.classList.add('custom-cursor');
-    document.body.appendChild(cursor);
+    const ring = document.createElement('div');
+    ring.classList.add('custom-cursor');
+    document.body.appendChild(ring);
 
-    const cursorDot = document.createElement('div');
-    cursorDot.classList.add('cursor-dot');
-    document.body.appendChild(cursorDot);
+    const dot = document.createElement('div');
+    dot.classList.add('cursor-dot');
+    document.body.appendChild(dot);
 
+    let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+    let ringX = mouseX, ringY = mouseY;
+
+    // Dot follows instantly; ring follows with smooth lerp
     document.addEventListener('mousemove', (e) => {
-      cursor.style.left = `${e.clientX}px`;
-      cursor.style.top = `${e.clientY}px`;
-
-      cursorDot.style.left = `${e.clientX}px`;
-      cursorDot.style.top = `${e.clientY}px`;
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      dot.style.left = `${mouseX}px`;
+      dot.style.top  = `${mouseY}px`;
     });
 
-    // Add hover effect on interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .card, .solution-card');
-    interactiveElements.forEach((el) => {
-      el.addEventListener('mouseenter', () => {
-        cursor.classList.add('cursor-expanded');
-      });
+    (function animateRing() {
+      ringX += (mouseX - ringX) * 0.10;
+      ringY += (mouseY - ringY) * 0.10;
+      ring.style.left = `${ringX}px`;
+      ring.style.top  = `${ringY}px`;
+      requestAnimationFrame(animateRing);
+    })();
 
-      el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('cursor-expanded');
-      });
+    // Expand ring on interactive elements
+    document.querySelectorAll('a, button, .card, .solution-card').forEach((el) => {
+      el.addEventListener('mouseenter', () => ring.classList.add('cursor-expanded'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('cursor-expanded'));
     });
   };
 

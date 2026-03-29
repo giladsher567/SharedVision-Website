@@ -17,23 +17,8 @@
 
 body {
     font-family: var(--font-assistant);
-    background-attachment: fixed;
-    background-image: url('https://r2.flowith.net/files/o/1753255707638-tech_consulting_growth_ai_data_index_0@1536x1024.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #08091a;
     position: relative;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(10, 10, 20, 0.85);
-    z-index: -1;
 }
 
 .font-heebo {
@@ -67,12 +52,10 @@ body::before {
 }
 
 .gradient-text {
-    background: linear-gradient(90deg, #ffffff, #f0f0f0);
+    background: linear-gradient(110deg, var(--color-turquoise) 0%, #a78bfa 50%, var(--color-purple) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .btn {
@@ -88,28 +71,34 @@ body::before {
 }
 
 .btn-primary {
-    background-color: var(--color-white);
-    color: var(--color-space-deep);
-    border: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     font-weight: bold;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 24px rgba(165, 79, 245, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.10);
 }
 
 .btn-primary:hover {
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
-    transform: translateY(-3px);
-    background-color: #f0f0f0;
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(165, 79, 245, 0.55);
+    box-shadow: 0 0 40px rgba(165, 79, 245, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
-    border: 2px solid var(--color-white);
+    border: 1px solid rgba(51, 212, 241, 0.35);
     color: var(--color-white);
-    background-color: transparent;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    background: rgba(51, 212, 241, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-purple);
+    border-color: rgba(51, 212, 241, 0.65);
+    background: rgba(51, 212, 241, 0.10);
+    box-shadow: 0 0 28px rgba(51, 212, 241, 0.22);
     color: var(--color-white);
 }
 
@@ -267,12 +256,12 @@ textarea.form-input {
 
 /* Modern Glass Morphism Effects */
 .glass-card {
-    background: var(--color-glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--color-glass-border);
+    background: rgba(10, 11, 28, 0.52);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(165, 79, 245, 0.13);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 /* Floating Elements */
@@ -354,34 +343,36 @@ textarea.form-input {
 /* Custom Cursor Styles */
 .custom-cursor {
     position: fixed;
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--color-turquoise);
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgba(51, 212, 241, 0.55);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: width 0.3s, height 0.3s, border-color 0.3s;
+    transition: width 0.3s ease, height 0.3s ease,
+                border-color 0.3s ease, background-color 0.3s ease,
+                box-shadow 0.3s ease;
     z-index: 9999;
-    mix-blend-mode: difference;
 }
 
 .cursor-dot {
     position: fixed;
-    width: 8px;
-    height: 8px;
-    background-color: var(--color-purple);
+    width: 3px;
+    height: 3px;
+    background-color: #fff;
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 10000;
-    transition: transform 0.1s;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.9), 0 0 10px rgba(51, 212, 241, 0.6);
 }
 
 .cursor-expanded {
-    width: 60px;
-    height: 60px;
-    border-color: var(--color-purple);
-    background-color: rgba(165, 79, 245, 0.1);
+    width: 40px;
+    height: 40px;
+    border-color: rgba(165, 79, 245, 0.6);
+    background-color: rgba(165, 79, 245, 0.07);
+    box-shadow: 0 0 18px rgba(165, 79, 245, 0.2);
 }
 
 /* Hide default cursor when custom cursor is active */
