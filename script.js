@@ -235,46 +235,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Custom cursor effect
-  const createCustomCursor = () => {
-    if (window.innerWidth < 1024) return;
-
-    const ring = document.createElement('div');
-    ring.classList.add('custom-cursor');
-    document.body.appendChild(ring);
-
-    const dot = document.createElement('div');
-    dot.classList.add('cursor-dot');
-    document.body.appendChild(dot);
-
-    let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-    let ringX = mouseX, ringY = mouseY;
-
-    // Dot follows instantly; ring follows with smooth lerp
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      dot.style.left = `${mouseX}px`;
-      dot.style.top  = `${mouseY}px`;
-    });
-
-    (function animateRing() {
-      ringX += (mouseX - ringX) * 0.10;
-      ringY += (mouseY - ringY) * 0.10;
-      ring.style.left = `${ringX}px`;
-      ring.style.top  = `${ringY}px`;
-      requestAnimationFrame(animateRing);
-    })();
-
-    // Expand ring on interactive elements
-    document.querySelectorAll('a, button, .card, .solution-card').forEach((el) => {
-      el.addEventListener('mouseenter', () => ring.classList.add('cursor-expanded'));
-      el.addEventListener('mouseleave', () => ring.classList.remove('cursor-expanded'));
-    });
-  };
-
-  // Initialize custom cursor
-  createCustomCursor();
 
   // Floating CTA button
   const createFloatingCTA = () => {

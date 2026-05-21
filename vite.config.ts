@@ -13,6 +13,9 @@ export default defineConfig({
         contact: resolve(__dirname, "contact.html"),
         lead: resolve(__dirname, "lead.html"), // הוספנו את זה
 
+        // Standalone product pages
+        'vertical-crop': resolve(__dirname, 'vertical-crop.html'),
+
         // English Pages
         "en/index": resolve(__dirname, "en/index.html"),
         "en/services": resolve(__dirname, "en/services.html"),

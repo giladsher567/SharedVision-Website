@@ -340,47 +340,6 @@ textarea.form-input {
     }
 }
 
-/* Custom Cursor Styles */
-.custom-cursor {
-    position: fixed;
-    width: 26px;
-    height: 26px;
-    border: 1px solid rgba(51, 212, 241, 0.55);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s ease, height 0.3s ease,
-                border-color 0.3s ease, background-color 0.3s ease,
-                box-shadow 0.3s ease;
-    z-index: 9999;
-}
-
-.cursor-dot {
-    position: fixed;
-    width: 3px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.9), 0 0 10px rgba(51, 212, 241, 0.6);
-}
-
-.cursor-expanded {
-    width: 40px;
-    height: 40px;
-    border-color: rgba(165, 79, 245, 0.6);
-    background-color: rgba(165, 79, 245, 0.07);
-    box-shadow: 0 0 18px rgba(165, 79, 245, 0.2);
-}
-
-/* Hide default cursor when custom cursor is active */
-@media (min-width: 1024px) {
-    body {
-        cursor: none;
-    }
-}
 
 /* Modern Entrance Animations */
 .fade-up {

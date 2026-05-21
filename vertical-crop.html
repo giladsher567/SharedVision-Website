@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vertical Crop — Crop Any Video to Vertical in Seconds</title>
+    <meta name="description"
+        content="Desktop tool for Windows that crops any video to vertical (9:16) in seconds. Works offline. No uploads. $30/month unlimited videos." />
+
+    <!-- Indexing -->
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://sharedvisionai.org/vertical-crop" />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Vertical Crop — Crop Any Video to Vertical in Seconds" />
+    <meta property="og:description"
+        content="Desktop tool for Windows that crops any video to vertical (9:16) in seconds. Works offline, no uploads. $30/month unlimited." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sharedvisionai.org/vertical-crop" />
+    <meta property="og:site_name" content="SharedVision AI" />
+    <meta property="og:image" content="/logo.png" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vertical Crop — Crop Any Video to Vertical in Seconds" />
+    <meta name="twitter:description"
+        content="Desktop tool for Windows. No uploads, works offline. $30/month unlimited videos." />
+    <meta name="twitter:image" content="/logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Heebo:wght@700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Vertical Crop",
+      "operatingSystem": "Windows",
+      "applicationCategory": "MultimediaApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "30",
+        "priceCurrency": "USD",
+        "billingDuration": "P1M"
+      },
+      "description": "Desktop tool that crops any video to 9:16 vertical format in seconds. Works offline, no cloud uploads required.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SharedVision AI",
+        "url": "https://sharedvisionai.org"
+      }
+    }
+    </script>
+
+    <style>
+        html { direction: ltr; }
+
+        /* ── Background ──────────────────────────────────────────── */
+        .vc-hero-bg { background: #08091a; }
+
+        /* ── Download button — white, high contrast ──────────────── */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: #ffffff;
+            color: #0B0C1B;
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            font-size: 1.125rem;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 18px rgba(255, 255, 255, 0.12);
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(255, 255, 255, 0.18);
+        }
+
+        /* ── Feature icon wrappers — neutral ─────────────────────── */
+        .feature-icon-wrap {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* ── Step numbers — simple white ring ────────────────────── */
+        .step-number {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            border: 1.5px solid rgba(255, 255, 255, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Heebo', sans-serif;
+            font-weight: 800;
+            font-size: 1.125rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        /* ── Pricing card ────────────────────────────────────────── */
+        .price-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* ── Scroll-in animation ─────────────────────────────────── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-up-delay-1 { transition-delay: 0.08s; }
+        .fade-up-delay-2 { transition-delay: 0.16s; }
+        .fade-up-delay-3 { transition-delay: 0.24s; }
+    </style>
+</head>
+
+<body class="text-light-gray font-assistant vc-hero-bg" style="min-height: 100vh;">
+
+    <!-- ===== HERO ===== -->
+    <section
+        class="relative min-h-screen flex flex-col items-center justify-center text-center text-white px-4 py-24 overflow-hidden">
+
+
+        <div class="relative z-10 max-w-3xl mx-auto">
+
+            <!-- eyebrow label -->
+            <div class="inline-block glass-card px-4 py-1 rounded-full mb-6">
+                <span class="text-sm font-semibold text-white/60">Windows Desktop App</span>
+            </div>
+
+            <h1 class="font-heebo text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+                Crop any video to<br />
+                <span class="gradient-text">vertical in seconds</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-light-gray max-w-2xl mx-auto mb-10">
+                Vertical Crop is a fast, offline desktop tool for Windows. Open your video, set the crop, export 9:16 —
+                done. No uploads, no cloud, no waiting.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <a href="https://github.com/giladsher567/vertical-clip-editor-releases/releases/latest/download/VerticalClipEditor-Setup.exe"
+                    class="download-btn">
+                    <i data-lucide="download" class="w-5 h-5"></i>
+                    Download for Windows
+                </a>
+            </div>
+
+            <!-- sub-note -->
+            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/40">
+                <span>Windows only</span>
+                <span class="w-px h-3 bg-white/20 inline-block"></span>
+                <span>$30 / month</span>
+                <span class="w-px h-3 bg-white/20 inline-block"></span>
+                <span>Unlimited videos</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="py-20 md:py-28 px-4">
+        <div class="max-w-5xl mx-auto">
+
+            <div class="text-center mb-14 fade-up">
+                <h2 class="font-heebo text-3xl md:text-5xl font-bold text-white mb-4">
+                    Everything you need. Nothing you don't.
+                </h2>
+                <p class="text-lg text-light-gray max-w-xl mx-auto">
+                    Built for creators who need vertical output fast — not a full editing suite.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <div class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift fade-up fade-up-delay-1">
+                    <div class="feature-icon-wrap mb-4">
+                        <i data-lucide="infinity" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="font-heebo text-xl font-bold text-white mb-2">Unlimited Videos</h3>
+                    <p class="text-light-gray/80 text-sm">
+                        One flat subscription. Process as many videos as you want, every month, with no per-export fees.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift fade-up fade-up-delay-2">
+                    <div class="feature-icon-wrap mb-4">
+                        <i data-lucide="wifi-off" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="font-heebo text-xl font-bold text-white mb-2">Works Offline</h3>
+                    <p class="text-light-gray/80 text-sm">
+                        Your footage never leaves your machine. No uploads, no cloud queues, no privacy concerns.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 border border-gray-700/40 hover-lift fade-up fade-up-delay-3">
+                    <div class="feature-icon-wrap mb-4">
+                        <i data-lucide="zap" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <h3 class="font-heebo text-xl font-bold text-white mb-2">Fast Local Processing</h3>
+                    <p class="text-light-gray/80 text-sm">
+                        Runs on your GPU or CPU. No internet bottleneck — export speed is limited only by your hardware.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="py-20 md:py-28 px-4">
+        <div class="max-w-3xl mx-auto">
+
+            <div class="text-center mb-14 fade-up">
+                <h2 class="font-heebo text-3xl md:text-5xl font-bold text-white mb-4">
+                    How it works
+                </h2>
+                <p class="text-lg text-light-gray">Three steps. Under a minute.</p>
+            </div>
+
+            <div class="space-y-8">
+
+                <div
+                    class="glass-card rounded-2xl p-6 border border-gray-700/40 flex items-start gap-5 fade-up fade-up-delay-1">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3 class="font-heebo text-xl font-bold text-white mb-1">Download &amp; install</h3>
+                        <p class="text-light-gray/80">
+                            Download the installer from GitHub, run it, and you're set. No account creation required to
+                            get started.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="glass-card rounded-2xl p-6 border border-gray-700/40 flex items-start gap-5 fade-up fade-up-delay-2">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3 class="font-heebo text-xl font-bold text-white mb-1">Open your video</h3>
+                        <p class="text-light-gray/80">
+                            Drag in any video file. Use the crop handles to frame exactly what you want in the vertical
+                            output.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="glass-card rounded-2xl p-6 border border-gray-700/40 flex items-start gap-5 fade-up fade-up-delay-3">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3 class="font-heebo text-xl font-bold text-white mb-1">Export vertical</h3>
+                        <p class="text-light-gray/80">
+                            Hit export. Your 9:16 video is ready to upload to TikTok, Reels, Shorts, or wherever you
+                            post.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING / CTA ===== -->
+    <section class="py-20 md:py-28 px-4">
+        <div class="max-w-2xl mx-auto text-center">
+
+            <div class="fade-up mb-10">
+                <h2 class="font-heebo text-3xl md:text-5xl font-bold text-white mb-4">
+                    Simple pricing
+                </h2>
+                <p class="text-lg text-light-gray">
+                    One plan. No tiers, no video limits, no surprise fees.
+                </p>
+            </div>
+
+            <div class="price-card fade-up fade-up-delay-1 w-full max-w-md mx-auto mb-10 text-left">
+                <p class="text-white/40 text-xs font-semibold uppercase tracking-widest mb-5">Monthly Plan</p>
+                <div class="flex items-end gap-1 mb-6">
+                    <span class="font-heebo font-extrabold text-white" style="font-size: 3.75rem; line-height: 1;">$30</span>
+                    <span class="text-white/50 mb-2 text-lg">/ month</span>
+                </div>
+                <ul class="space-y-3 text-sm mb-7">
+                    <li class="flex items-center gap-2.5 text-light-gray/80">
+                        <i data-lucide="check" class="w-4 h-4 flex-shrink-0 text-white"></i>
+                        Unlimited video exports
+                    </li>
+                    <li class="flex items-center gap-2.5 text-light-gray/80">
+                        <i data-lucide="check" class="w-4 h-4 flex-shrink-0 text-white"></i>
+                        Works offline — nothing uploaded
+                    </li>
+                    <li class="flex items-center gap-2.5 text-light-gray/80">
+                        <i data-lucide="check" class="w-4 h-4 flex-shrink-0 text-white"></i>
+                        Windows desktop app
+                    </li>
+                    <li class="flex items-center gap-2.5 text-light-gray/80">
+                        <i data-lucide="check" class="w-4 h-4 flex-shrink-0 text-white"></i>
+                        Fast local processing
+                    </li>
+                </ul>
+                <a href="https://github.com/giladsher567/vertical-clip-editor-releases/releases/latest/download/VerticalClipEditor-Setup.exe"
+                    class="download-btn w-full justify-center">
+                    <i data-lucide="download" class="w-5 h-5"></i>
+                    Download for Windows
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="py-10 px-4 border-t border-gray-700/30 text-center">
+        <p class="text-light-gray/60 text-sm">
+            Built by
+            <a href="https://sharedvisionai.org" class="text-white/60 hover:text-white transition-colors"
+                style="text-decoration: none;">SharedVision AI</a>
+        </p>
+    </footer>
+
+    <script>
+        // Initialise Lucide icons
+        lucide.createIcons();
+
+        // Scroll-in observer
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.15 }
+        );
+
+        document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+    </script>
+
+</body>
+
+</html>

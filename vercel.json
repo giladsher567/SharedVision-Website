@@ -20,6 +20,10 @@
             "destination": "/lead.html"
         },
         {
+            "source": "/vertical-crop",
+            "destination": "/vertical-crop.html"
+        },
+        {
             "source": "/en/services",
             "destination": "/en/services.html"
         },
