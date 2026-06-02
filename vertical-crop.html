@@ -327,22 +327,26 @@
                 <h2 class="h2" style="font-size:1.875rem;">See it in action</h2>
                 <p class="sub">From timeline to vertical clip — watch the full workflow.</p>
             </div>
-            <!--
-                VIDEO PLACEHOLDER
-                Replace this block with your embed when ready, e.g.:
-                <div style="position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;">
-                  <iframe style="position:absolute;inset:0;width:100%;height:100%;"
-                          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                          frameborder="0" allowfullscreen></iframe>
-                </div>
-            -->
-            <div class="video-shell fade-up d1">
-                <div style="display:flex;flex-direction:column;align-items:center;gap:1rem;">
-                    <div style="width:4rem;height:4rem;border-radius:50%;background:#eff6ff;border:1px solid #bfdbfe;
-                                display:flex;align-items:center;justify-content:center;">
-                        <i data-lucide="play" style="width:22px;height:22px;color:#1e40af;margin-left:3px;"></i>
+            <div class="fade-up d1" id="yt-player"
+                 style="position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;
+                        box-shadow:0 4px 32px rgba(14,165,233,0.10);border:1px solid rgba(14,165,233,0.2);
+                        cursor:pointer;background:#000;"
+                 onclick="this.innerHTML='<iframe style=\'position:absolute;inset:0;width:100%;height:100%;border:0;\' src=\'https://www.youtube.com/embed/APpiOi1mTE8?autoplay=1\' title=\'VertiCrop Demo\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+                <img src="https://img.youtube.com/vi/APpiOi1mTE8/maxresdefault.jpg"
+                     alt="VertiCrop Demo"
+                     style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;" />
+                <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;">
+                    <div style="width:4.5rem;height:4.5rem;border-radius:50%;
+                                background:linear-gradient(135deg,#1e40af 0%,#0ea5e9 100%);
+                                display:flex;align-items:center;justify-content:center;
+                                box-shadow:0 4px 24px rgba(14,165,233,0.45);
+                                transition:transform 0.2s ease,box-shadow 0.2s ease;"
+                         onmouseover="this.style.transform='scale(1.08)';this.style.boxShadow='0 8px 32px rgba(14,165,233,0.6)';"
+                         onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 24px rgba(14,165,233,0.45)';">
+                        <svg viewBox="0 0 24 24" fill="white" width="26" height="26" style="margin-left:3px;">
+                            <polygon points="5,3 19,12 5,21"/>
+                        </svg>
                     </div>
-                    <span style="color:#94a3b8;font-size:.9rem;">Demo video coming soon</span>
                 </div>
             </div>
         </div>
