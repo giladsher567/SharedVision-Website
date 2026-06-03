@@ -10,7 +10,7 @@
         {
             "source": "/",
             "has": [{ "type": "host", "value": "verticrop.sharedvisionai.org" }],
-            "destination": "/vertical-crop"
+            "destination": "/vertical-crop.html"
         },
         {
             "source": "/services",
