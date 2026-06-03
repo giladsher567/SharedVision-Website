@@ -251,16 +251,30 @@
                             <stop offset="0%" stop-color="#1e40af"/>
                             <stop offset="100%" stop-color="#38bdf8"/>
                         </linearGradient>
-                        <filter id="glow1" x="-20%" y="-40%" width="140%" height="180%">
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="g"/>
-                            <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        <!-- glow halo for the tube -->
+                        <filter id="tube-glow" x="-40%" y="-80%" width="180%" height="260%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+                            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <!-- glow halo for the white lines -->
+                        <filter id="line-glow" x="-80%" y="-30%" width="260%" height="160%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+                            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
                         </filter>
                     </defs>
-                    <rect width="100" height="100" rx="22" fill="#1c1c1e"/>
-                    <rect x="15" y="28" width="70" height="44" rx="8" fill="none"
-                          stroke="url(#lg1)" stroke-width="2.5" filter="url(#glow1)"/>
-                    <line x1="38" y1="22" x2="38" y2="78" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="63" y1="22" x2="63" y2="78" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <!-- glow halo (wide + soft) -->
+                    <rect x="11" y="25" width="78" height="50" rx="17" fill="none"
+                          stroke="url(#lg1)" stroke-width="9" filter="url(#tube-glow)" opacity="0.6"/>
+                    <!-- bright core (thin, crisp) -->
+                    <rect x="11" y="25" width="78" height="50" rx="17" fill="none"
+                          stroke="#93c5fd" stroke-width="2"/>
+                    <!-- white lines: glow + core -->
+                    <g filter="url(#line-glow)" opacity="0.75">
+                        <line x1="38" y1="16" x2="38" y2="84" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                        <line x1="63" y1="16" x2="63" y2="84" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                    </g>
+                    <line x1="38" y1="16" x2="38" y2="84" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="63" y1="16" x2="63" y2="84" stroke="white" stroke-width="2" stroke-linecap="round"/>
                 </svg>
                 <span class="font-heebo" style="font-size:1.2rem;font-weight:800;color:#0f172a;letter-spacing:-.01em;">VertiCrop</span>
             </a>
@@ -523,11 +537,25 @@
                             <stop offset="0%" stop-color="#1e40af"/>
                             <stop offset="100%" stop-color="#38bdf8"/>
                         </linearGradient>
+                        <filter id="tube-glow2" x="-40%" y="-80%" width="180%" height="260%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+                            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <filter id="line-glow2" x="-80%" y="-30%" width="260%" height="160%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+                            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
                     </defs>
-                    <rect width="100" height="100" rx="22" fill="#1c1c1e"/>
-                    <rect x="15" y="28" width="70" height="44" rx="8" fill="none" stroke="url(#lg2)" stroke-width="2.5"/>
-                    <line x1="38" y1="22" x2="38" y2="78" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                    <line x1="63" y1="22" x2="63" y2="78" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <rect x="11" y="25" width="78" height="50" rx="17" fill="none"
+                          stroke="url(#lg2)" stroke-width="9" filter="url(#tube-glow2)" opacity="0.6"/>
+                    <rect x="11" y="25" width="78" height="50" rx="17" fill="none"
+                          stroke="#93c5fd" stroke-width="2"/>
+                    <g filter="url(#line-glow2)" opacity="0.75">
+                        <line x1="38" y1="16" x2="38" y2="84" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                        <line x1="63" y1="16" x2="63" y2="84" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                    </g>
+                    <line x1="38" y1="16" x2="38" y2="84" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="63" y1="16" x2="63" y2="84" stroke="white" stroke-width="2" stroke-linecap="round"/>
                 </svg>
                 <span class="font-heebo" style="font-size:.9375rem;font-weight:800;color:#0f172a;">VertiCrop</span>
             </div>
